@@ -6,7 +6,7 @@ import android.view.HapticFeedbackConstants
 import android.view.View
 import android.widget.Toast
 
-object SettingsUiUtils {
+object UiActions {
 
     fun setupButton(activity: Activity, id: Int, action: () -> Unit) {
         val view = activity.findViewById<View>(id)
