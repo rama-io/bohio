@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Theme-level attrs. Each app's theme assigns its own values to these
+      (see themes.xml for the defaults). CsActivity / ThemeManager / shared
+      widgets resolve colors through these attrs only — never via direct
+      @color/... references — so per-app palettes are respected.
+    -->
+    <attr name="ramaWindowBg" format="color" />
+    <attr name="ramaCardBackground" format="color" />
+    <attr name="ramaDividerColor" format="color" />
+    <attr name="ramaTextColor" format="color" />
+    <attr name="ramaTextColorSecondary" format="color" />
+    <attr name="ramaAccentColor" format="color" />
+
+</resources>

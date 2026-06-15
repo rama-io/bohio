@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="rama_spacing_xs">4dp</dimen>
+    <dimen name="rama_spacing_sm">8dp</dimen>
+    <dimen name="rama_spacing_md">16dp</dimen>
+    <dimen name="rama_spacing_lg">24dp</dimen>
+    <dimen name="rama_spacing_xl">32dp</dimen>
+
+    <dimen name="rama_text_size_sm">12sp</dimen>
+    <dimen name="rama_text_size_md">14sp</dimen>
+    <dimen name="rama_text_size_lg">18sp</dimen>
+    <dimen name="rama_text_size_xl">22sp</dimen>
+
+    <!-- Minimum touch target, useful for long-press / multi-select rows -->
+    <dimen name="rama_touch_target_min">48dp</dimen>
+
+</resources>

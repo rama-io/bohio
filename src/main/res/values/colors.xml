@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Neutral fallback palette used by Theme.Rama.Base. Apps normally
+      override the corresponding theme attrs (ramaWindowBg, etc.) in their
+      own themes.xml rather than redefining these colors directly.
+    -->
+    <color name="rama_default_window_bg">#1B1F1B</color>
+    <color name="rama_default_card_bg">#2A2F2A</color>
+    <color name="rama_default_divider">#3A3F3A</color>
+    <color name="rama_default_text">#EAEAEA</color>
+    <color name="rama_default_text_secondary">#A0A8A0</color>
+    <color name="rama_default_accent">#8FBF6E</color>
+
+</resources>

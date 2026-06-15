@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    namespace 'com.rama.common'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    // 'api' so consuming apps get these transitively without redeclaring.
+    // CsActivity extends AppCompatActivity and uses OnBackPressedCallback
+    // (from androidx.activity, pulled in transitively by appcompat).
+    api 'androidx.appcompat:appcompat:1.6.1'
+    api 'androidx.fragment:fragment-ktx:1.6.2'
+}
