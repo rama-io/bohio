@@ -25,6 +25,11 @@ Contains theme/font/locale managers, `CsActivity`, `AboutActivity`,
    git submodule update --init --recursive
    ```
 
+   Update submodule
+   ```bash
+   git submodule update --remote bohio
+   ```
+
 3. In the app's `settings.gradle`:
 
    ```groovy

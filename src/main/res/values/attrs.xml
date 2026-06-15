@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--
+  <!--
       Theme-level attrs. Each app's theme assigns its own values to these
       (see themes.xml for the defaults). CsActivity / ThemeManager / shared
       widgets resolve colors through these attrs only — never via direct
       @color/... references — so per-app palettes are respected.
     -->
-    <attr name="ramaWindowBg" format="color" />
-    <attr name="ramaCardBackground" format="color" />
-    <attr name="ramaDividerColor" format="color" />
-    <attr name="ramaTextColor" format="color" />
-    <attr name="ramaTextColorSecondary" format="color" />
-    <attr name="ramaAccentColor" format="color" />
 
+  <attr name="ramaWindowBg" format="color" />
+  <attr name="ramaCardBackground" format="color" />
+  <attr name="ramaDividerColor" format="color" />
+  <attr name="ramaTextColor" format="color" />
+  <attr name="ramaTextColorSecondary" format="color" />
+  <attr name="ramaAccentColor" format="color" />
+
+  <attr name="bgColor" format="color" />
+  <attr name="foregroundColor" format="color" />
+  <attr name="text" format="string" />
+  <attr name="icon" format="reference" />
+
+  <declare-styleable name="WdCollapsibleSection">
+    <attr name="header" format="string" />
+    <attr name="key" format="string" />
+    <attr name="defaultExpanded" format="boolean" />
+  </declare-styleable>
+
+  <declare-styleable name="WdRange">
+    <attr name="values" format="string" />
+    <attr name="valuesArray" format="reference" />
+  </declare-styleable>
+  
 </resources>

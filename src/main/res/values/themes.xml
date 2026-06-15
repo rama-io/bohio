@@ -25,6 +25,9 @@
         <item name="android:windowBackground">?attr/ramaWindowBg</item>
         <item name="colorAccent">?attr/ramaAccentColor</item>
         <item name="android:isLightTheme">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:textColor">?attr/ramaTextColor</item>     
     </style>
 
      <!-- Global -->
