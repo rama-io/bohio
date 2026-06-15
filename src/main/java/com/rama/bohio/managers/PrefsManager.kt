@@ -278,6 +278,14 @@ abstract class PrefsManager protected constructor(context: Context) {
     }
 
     companion object {
+        @Volatile
+        private var INSTANCE: PrefsManager? = null
+
+        fun getInstance(context: Context): PrefsManager =
+            INSTANCE ?: synchronized(this) {
+                INSTANCE ?: PrefsManager(context.applicationContext).also { INSTANCE = it }
+            }
+        
         // Keys whose JSON-encoded integers must be re-coerced to Float on import
         private val FLOAT_PREF_KEYS = setOf(
             PrefKeys.APP_UI_SCALE
