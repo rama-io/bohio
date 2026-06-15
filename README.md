@@ -1,6 +1,6 @@
 # rama-common
 
-Shared Android library module for Mako, Tūī, Puma/Teyin, and Txori.
+Shared Android library module for Mako, Tūī, Teyin, and Txori.
 Contains theme/font/locale managers, `CsActivity`, `AboutActivity`,
 `SettingsActivity`, shared widgets, and the common `values/` resources
 (attrs, colors, dimens, themes).
