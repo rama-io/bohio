@@ -200,7 +200,7 @@ object ThemeManager {
         }
 
     private fun buildCustomPalette(context: android.content.Context): Palette {
-        val prefs = PrefsManager.getInstance(context)
+        val prefs = BohioPrefsManager.getInstance(context)
         val base = TEYIN
         fun get(key: String, fallback: Int) = prefs.getCustomThemeColor(key, fallback)
         return Palette(
@@ -226,7 +226,7 @@ object ThemeManager {
     }
 
     fun applyTheme(context: Context, root: View) {
-        val prefs = PrefsManager.getInstance(context)
+        val prefs = BohioPrefsManager.getInstance(context)
         val palette = paletteFor(prefs.getTheme(), context)
         val typeface = FontManager.getTypeface(context, prefs.getFontStyle())
         applyRecursively(context, root, palette, typeface)
