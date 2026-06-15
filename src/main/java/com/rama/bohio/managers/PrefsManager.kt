@@ -3,29 +3,32 @@ package com.rama.bohio.managers
 import android.content.Context
 import android.content.SharedPreferences
 import android.net.Uri
-import android.util.Log
 import org.json.JSONObject
 
-class PrefsManager private constructor(context: Context) {
+/**
+ * Shared preferences base for all Rama apps.
+ *
+ * Holds the common keys/enums, shared getters/setters, and export/import/clear
+ * logic. Each app provides its own subclass + singleton (see Teyin's
+ * PrefsManager for the pattern):
+ *
+ *   class PrefsManager private constructor(context: Context) : BohioPrefsManager(context) {
+ *       override val defaultTheme = BohioPrefsManager.Theme.TEYIN
+ *       object FileKeys { ... app-specific keys ... }
+ *       override fun applyAppDefaults(editor: SharedPreferences.Editor) { ... }
+ *       companion object { fun getInstance(context: Context): PrefsManager = ... }
+ *   }
+ */
+abstract class PrefsManager protected constructor(context: Context) {
 
     val prefs: SharedPreferences =
         context.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
-    companion object {
-        @Volatile
-        private var INSTANCE: PrefsManager? = null
-
-        fun getInstance(context: Context): PrefsManager {
-            return INSTANCE ?: synchronized(this) {
-                INSTANCE ?: PrefsManager(context.applicationContext).also { INSTANCE = it }
-            }
-        }
-
-        // Keys whose JSON-encoded integers must be re-coerced to Float on import
-        private val FLOAT_PREF_KEYS = setOf(
-            PrefKeys.APP_UI_SCALE
-        )
-    }
+    /**
+     * Theme applied on first run. Override per app, e.g.
+     * `override val defaultTheme = Theme.TEYIN`.
+     */
+    protected open val defaultTheme: String = Theme.RAMA
 
     object PrefKeys {
         const val APPS_ICONS = "apps:icons"
@@ -139,6 +142,43 @@ class PrefsManager private constructor(context: Context) {
     fun setString(key: String, value: String) =
         prefs.edit().putString(key, value).apply()
 
+    /**
+     * Populates first-run defaults shared by every app, then delegates to
+     * [applyAppDefaults] for app-specific ones — both in the same editor
+     * transaction. Guarded by [PrefKeys.APP_LANGUAGE] so it's a no-op after
+     * the first run.
+     *
+     * @param sync if true, commits synchronously (used by [clearAllPrefs],
+     *   which needs the defaults written before returning).
+     */
+    open fun initPrefs(sync: Boolean = false) {
+        if (prefs.contains(PrefKeys.APP_LANGUAGE)) return
+
+        val editor = prefs.edit()
+            .putString(PrefKeys.FONT_STYLE, FontStyle.JERSEY_25)
+            .putString(PrefKeys.APP_LANGUAGE, Language.SYSTEM)
+            .putFloat(PrefKeys.APP_UI_SCALE, 1f)
+            .putBoolean(PrefKeys.APPS_ICONS, false)
+            .putBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)
+            .putBoolean(PrefKeys.SYSTEM_PREVENT_ROTATION, false)
+            .putString(PrefKeys.APP_THEME_NAME, defaultTheme)
+            .putBoolean(PrefKeys.SETTINGS_SECTION_FONTS, true)
+            .putBoolean(PrefKeys.SETTINGS_SECTION_SYSTEM, true)
+            .putBoolean(PrefKeys.SETTINGS_SECTION_LANGUAGE, true)
+            .putBoolean(PrefKeys.SETTINGS_SECTION_THEMES, true)
+
+        applyAppDefaults(editor)
+
+        if (sync) editor.commit() else editor.apply()
+    }
+
+    /**
+     * Override to add app-specific first-run defaults to the same
+     * editor/transaction used by [initPrefs]. No-op by default.
+     */
+    protected open fun applyAppDefaults(editor: SharedPreferences.Editor) {
+    }
+
     // Export/Import/Clear
 
     fun buildExportJson(): JSONObject {
@@ -235,5 +275,12 @@ class PrefsManager private constructor(context: Context) {
         } catch (e: Exception) {
             Result.failure(e)
         }
+    }
+
+    companion object {
+        // Keys whose JSON-encoded integers must be re-coerced to Float on import
+        private val FLOAT_PREF_KEYS = setOf(
+            PrefKeys.APP_UI_SCALE
+        )
     }
 }
