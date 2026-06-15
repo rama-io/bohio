@@ -16,6 +16,7 @@
             <ImageView
                 android:id="@+id/icon_image"
                 android:contentDescription="@null"
+                android:tint="@color/accent_1"
                 style="@style/Icon24" />
         </FrameLayout>
 
