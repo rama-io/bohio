@@ -1,4 +1,4 @@
-package com.rama.common.util
+package com.rama.bohio.util
 
 import android.app.Activity
 import android.content.Context
@@ -7,7 +7,7 @@ import android.os.Build
 import android.util.TypedValue
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
-import com.rama.common.R
+import com.rama.bohio.R
 
 /**
  * Shared theme manager: theme-attr resolution, wallpaper screen opacity

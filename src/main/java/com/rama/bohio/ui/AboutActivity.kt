@@ -1,16 +1,16 @@
-package com.rama.common.ui
+package com.rama.bohio.ui
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.TextView
-import com.rama.common.CsActivity
-import com.rama.common.R
+import com.rama.bohio.CsActivity
+import com.rama.bohio.R
 
 /**
  * Generic "About" screen reused across apps.
  *
- * :common can't see each app's R class at compile time, so branding is
+ * :bohio can't see each app's R class at compile time, so branding is
  * passed in via Intent extras rather than resource references:
  *
  *   startActivity(

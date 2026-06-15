@@ -1,9 +1,9 @@
-package com.rama.common.ui
+package com.rama.bohio.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.rama.common.CsActivity
-import com.rama.common.R
+import com.rama.bohio.CsActivity
+import com.rama.bohio.R
 
 /**
  * Base settings activity. Apps extend this and provide their own fragment

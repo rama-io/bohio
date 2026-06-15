@@ -1,12 +1,12 @@
-package com.rama.common
+package com.rama.bohio
 
 import android.content.Context
 import android.os.Bundle
 import android.view.MotionEvent
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
-import com.rama.common.util.LocaleHelper
-import com.rama.common.util.ThemeManager
+import com.rama.bohio.util.LocaleHelper
+import com.rama.bohio.util.ThemeManager
 
 /**
  * Base activity shared across Rama apps. Subclass this instead of

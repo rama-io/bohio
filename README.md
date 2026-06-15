@@ -1,8 +1,8 @@
-# rama-common
+# Bohío
 
-Shared Android library module for Mako, Tūī, Teyin, and Txori.
+Shared Android library module for Rama.
 Contains theme/font/locale managers, `CsActivity`, `AboutActivity`,
-`SettingsActivity`, shared widgets, and the common `values/` resources
+`SettingsActivity`, shared widgets, and the bohio `values/` resources
 (attrs, colors, dimens, themes).
 
 ## First-time setup
@@ -13,30 +13,30 @@ Contains theme/font/locale managers, `CsActivity`, `AboutActivity`,
    ```bash
    git init
    git add .
-   git commit -m "Initial rama-common scaffold"
-   git remote add origin https://github.com/rama-io/rama-common.git
+   git commit -m "Initial bohio scaffold"
+   git remote add origin https://github.com/rama-io/bohio.git
    git push -u origin main
    ```
 
 2. In each app repo, add it as a submodule:
 
    ```bash
-   git submodule add https://github.com/rama-io/rama-common.git common
+   git submodule add https://github.com/rama-io/bohio.git bohio
    git submodule update --init --recursive
    ```
 
 3. In the app's `settings.gradle`:
 
    ```groovy
-   include ':app', ':common'
-   project(':common').projectDir = file('common')
+   include ':app', ':bohio'
+   project(':bohio').projectDir = file('bohio')
    ```
 
 4. In `app/build.gradle`:
 
    ```groovy
    dependencies {
-       implementation project(':common')
+       implementation project(':bohio')
    }
    ```
 
@@ -45,7 +45,7 @@ Contains theme/font/locale managers, `CsActivity`, `AboutActivity`,
 
 6. For F-Droid, add `submodules: true` to the relevant build entry in the
    app's metadata so `git submodule update --init --recursive` runs after
-   checkout. Keep the `rama-common` repo public and avoid rewriting history
+   checkout. Keep the `bohio` repo public and avoid rewriting history
    on any commit a published app version's submodule pointer references.
 
 ## Porting checklist
@@ -67,7 +67,7 @@ app should replace the stub:
 
 ## Resource override pattern
 
-`:common` declares attrs and ships neutral defaults via `Theme.Rama.Base`.
+`:bohio` declares attrs and ships neutral defaults via `Theme.Rama.Base`.
 Each app overrides the attrs it cares about:
 
 ```xml
@@ -79,7 +79,7 @@ Each app overrides the attrs it cares about:
 </style>
 ```
 
-Anything in `:common` that needs a color/dimen must resolve it through one
+Anything in `:bohio` that needs a color/dimen must resolve it through one
 of the `ramaXxx` attrs (via `ThemeManager.resolveColorAttr`) or `@dimen/rama_*`
 — never a direct `R.color.*` reference to an app-only resource, since
-`:common` can't see the app's `R` class.
+`:bohio` can't see the app's `R` class.

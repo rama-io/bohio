@@ -1,14 +1,8 @@
-package com.rama.common.util
+package com.rama.bohio.util
 
 import android.content.Context
 import android.util.TypedValue
 
-/**
- * Small unit-conversion helpers shared across apps.
- *
- * Port over any additional helpers from existing dimens.kt files
- * (e.g. screen-width-based breakpoints used for grid columns).
- */
 object Dimens {
 
     fun dpToPx(context: Context, dp: Float): Int =

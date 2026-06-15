@@ -1,4 +1,4 @@
-package com.rama.common.util
+package com.rama.bohio.util
 
 import android.content.Context
 import android.graphics.Typeface

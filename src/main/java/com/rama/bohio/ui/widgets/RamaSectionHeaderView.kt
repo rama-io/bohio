@@ -1,11 +1,11 @@
-package com.rama.common.ui.widgets
+package com.rama.bohio.ui.widgets
 
 import android.content.Context
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.widget.TextView
-import com.rama.common.R
-import com.rama.common.util.ThemeManager
+import com.rama.bohio.R
+import com.rama.bohio.util.ThemeManager
 
 /**
  * Section / folder header row used in list adapters — e.g. the
