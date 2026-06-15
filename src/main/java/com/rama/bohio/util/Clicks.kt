@@ -5,11 +5,10 @@ import android.content.Intent
 import android.view.HapticFeedbackConstants
 import android.view.View
 import android.widget.Toast
-import com.rama.bohio.activities.SettingsActivity
 
 object SettingsUiUtils {
 
-    fun setupButton(activity: SettingsActivity, id: Int, action: () -> Unit) {
+    fun setupButton(activity: Activity, id: Int, action: () -> Unit) {
         val view = activity.findViewById<View>(id)
         setClickWithHaptics(view, action)
     }
