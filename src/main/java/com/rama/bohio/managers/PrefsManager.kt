@@ -11,6 +11,22 @@ class PrefsManager private constructor(context: Context) {
     val prefs: SharedPreferences =
         context.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
+    companion object {
+        @Volatile
+        private var INSTANCE: PrefsManager? = null
+
+        fun getInstance(context: Context): PrefsManager {
+            return INSTANCE ?: synchronized(this) {
+                INSTANCE ?: PrefsManager(context.applicationContext).also { INSTANCE = it }
+            }
+        }
+
+        // Keys whose JSON-encoded integers must be re-coerced to Float on import
+        private val FLOAT_PREF_KEYS = setOf(
+            PrefKeys.APP_UI_SCALE
+        )
+    }
+
     object PrefKeys {
         const val APPS_ICONS = "apps:icons"
         const val FONT_STYLE = "font:style"
@@ -125,7 +141,7 @@ class PrefsManager private constructor(context: Context) {
 
     // Export/Import/Clear
 
-     private fun buildExportJson(): JSONObject {
+    fun buildExportJson(): JSONObject {
         val json = JSONObject()
 
         val sortedEntries = prefs.all.entries
