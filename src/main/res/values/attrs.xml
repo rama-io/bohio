@@ -8,13 +8,6 @@
       @color/... references — so per-app palettes are respected.
     -->
 
-  <attr name="ramaWindowBg" format="color" />
-  <attr name="ramaCardBackground" format="color" />
-  <attr name="ramaDividerColor" format="color" />
-  <attr name="ramaTextColor" format="color" />
-  <attr name="ramaTextColorSecondary" format="color" />
-  <attr name="ramaAccentColor" format="color" />
-
   <attr name="bgColor" format="color" />
   <attr name="foregroundColor" format="color" />
   <attr name="text" format="string" />
@@ -30,5 +23,5 @@
     <attr name="values" format="string" />
     <attr name="valuesArray" format="reference" />
   </declare-styleable>
-  
+
 </resources>
