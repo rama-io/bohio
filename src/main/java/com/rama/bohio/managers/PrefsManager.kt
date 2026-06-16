@@ -230,5 +230,31 @@ abstract class PrefsManager protected constructor(context: Context) {
         private val FLOAT_PREF_KEYS = setOf(
             PrefKeys.APP_UI_SCALE
         )
+
+        /**
+         * Holds the singleton registered by each app's own PrefsManager subclass.
+         * [FontManager] and [ThemeManager] call [getInstance] so they never need to
+         * depend on an app-specific subclass.
+         */
+        @Volatile private var instance: PrefsManager? = null
+
+        /**
+         * Called by every app subclass's own `getInstance` immediately after it
+         * creates its singleton, so library-internal callers ([FontManager],
+         * [ThemeManager]) can resolve prefs without knowing the concrete subtype.
+         */
+        fun register(prefs: PrefsManager) { instance = prefs }
+
+        /**
+         * Returns the currently registered [PrefsManager] singleton.
+         * Throws if the app hasn't called [register] yet (i.e. before the app
+         * subclass is initialised).
+         */
+        fun getInstance(context: Context): PrefsManager =
+            instance ?: error(
+                "PrefsManager.register() has not been called. " +
+                "Make sure your app's PrefsManager.getInstance() is called before " +
+                "FontManager or ThemeManager."
+            )
     }
 }

@@ -1,4 +1,4 @@
-package com.rama.bohio.widgets.color
+package com.rama.bohio.widgets
 
 import android.content.Context
 import android.graphics.*
@@ -56,6 +56,7 @@ class HueStripView @JvmOverloads constructor(
                 invalidate()
                 return true
             }
+
             MotionEvent.ACTION_UP -> {
                 performClick()
                 return true

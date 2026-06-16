@@ -29,9 +29,5 @@ android {
 }
 
 dependencies {
-    // 'api' so consuming apps get these transitively without redeclaring.
-    // CsActivity extends AppCompatActivity and uses OnBackPressedCallback
-    // (from androidx.activity, pulled in transitively by appcompat).
     api 'androidx.appcompat:appcompat:1.6.1'
-    api 'androidx.fragment:fragment-ktx:1.6.2'
 }

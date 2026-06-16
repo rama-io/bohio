@@ -33,7 +33,7 @@ Make sure the app's theme extends `Theme.Rama.Base` in `themes.xml`.
 
 For F-Droid, add `submodules: true` to the relevant build entry in the app's metadata so `git submodule update --init --recursive` runs after checkout. Keep the `bohio` repo public and avoid rewriting history on any commit a published app version's submodule pointer references.
 
-## Maintanence
+## Maintenance
 
 Update submodule
 ```bash

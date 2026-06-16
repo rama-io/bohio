@@ -34,6 +34,9 @@
     <string name="contributor_isotjs" translatable="false">isotjs</string>
     <string name="contributor_isotjs_url" translatable="false">github.com/isotjs</string>
 
+    <!-- Dialogs -->
+    <string name="toast_invalid_color">Invalid color</string>
+
     <!-- Groups -->
     <string name="settings_section_expand_indicator" translatable="false">[+]</string>
     <string name="settings_section_collapse_indicator" translatable="false">[-]</string>
