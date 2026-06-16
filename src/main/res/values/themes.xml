@@ -22,7 +22,7 @@
         <item name="android:windowFullscreen">false</item>
     </style>
 
-     <!-- Global -->
+    <!-- Global -->
 
     <style name="BlockFlow">
         <item name="android:layout_width">match_parent</item>
@@ -40,6 +40,11 @@
     </style>
 
     <style name="HorizontalListDivided" parent="HorizontalList">
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@drawable/list_divider</item>
+    </style>
+
+    <style name="HorizontalListDivided_BG2" parent="HorizontalList_BG2">
         <item name="android:showDividers">middle</item>
         <item name="android:divider">@drawable/list_divider</item>
     </style>
@@ -63,14 +68,14 @@
         <item name="android:divider">@drawable/list_divider</item>
     </style>
 
-    <style name="VerticalListDividedSmall" parent="VerticalListDivided">
-        <item name="android:showDividers">middle</item>
-        <item name="android:divider">@drawable/list_divider_small</item>
-    </style>
-
     <style name="VerticalListDivided_BG2" parent="VerticalList_BG2">
         <item name="android:showDividers">middle</item>
         <item name="android:divider">@drawable/list_divider</item>
+    </style>
+
+    <style name="VerticalListDividedSmall" parent="VerticalListDivided">
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@drawable/list_divider_small</item>
     </style>
 
     <style name="H1" parent="BlockFlow">
@@ -179,6 +184,12 @@
         <item name="android:layout_height">24sp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:tint">@color/icon</item>
+    </style>
+
+    <style name="Icon32">
+        <item name="android:layout_width">32sp</item>
+        <item name="android:layout_height">32sp</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="ColorPickerBtn" parent="BlockFlow">

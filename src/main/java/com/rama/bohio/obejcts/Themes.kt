@@ -2,21 +2,27 @@ package com.rama.bohio.objects
 
 object Themes {
     data class Palette(
+        val h1: Int,
         val foreground: Int,
         val bg_1: Int,
         val bg_2: Int,
         val bg_3: Int,
+        val bg_4: Int,
+        val bg_display: Int,
         val accent_1: Int,
         val accent_2: Int,
         val accent_3: Int,
+        val accent_4: Int,
         val disabled: Int,
         val input: Int,
         val button_1: Int,
+        val button_1_selected: Int,
         val button_2: Int,
         val danger: Int,
         val collapsible_header: Int,
         val icon: Int,
-        val h1: Int,
+        val media_background: Int,
+        val progressbar: Int,
     )
 
     // Teyin (default)
@@ -25,17 +31,23 @@ object Themes {
         bg_1 = 0xFF0E181A.toInt(),
         bg_2 = 0xFF162A2E.toInt(),
         bg_3 = 0xFF1E383D.toInt(),
+        bg_4 = 0xFF28484D.toInt(),
+        bg_display = 0xFF081012.toInt(),
         accent_1 = 0xFF4DA8AC.toInt(),
         accent_2 = 0xFFD4AF37.toInt(),
         accent_3 = 0xFFC77D4D.toInt(),
+        accent_4 = 0xFF6A9FCF.toInt(),
         disabled = 0xFF5D7A7C.toInt(),
         input = 0xFF0C1416.toInt(),
         button_1 = 0xFF3A9DA0.toInt(),
+        button_1_selected = 0xFF6BC1C4.toInt(),
         button_2 = 0xFFC49B2E.toInt(),
         danger = 0xFFB83A2D.toInt(),
         collapsible_header = 0xFF7A9495.toInt(),
         icon = 0xFFC8C2B8.toInt(),
         h1 = 0xFFEAE6DF.toInt(),
+        media_background = 0xFF5E9FA3.toInt(),
+        progressbar = 0xFF31585B.toInt(),
     )
 
     // Mako
@@ -47,6 +59,7 @@ object Themes {
         accent_1 = 0xFFABD68E.toInt(),
         accent_2 = 0xFFCDC58B.toInt(),
         accent_3 = 0xFFDCD07C.toInt(),
+        accent_4 = 0xFF7CB1DC.toInt(),
         disabled = 0xFF888888.toInt(),
         input = 0xFF16161F.toInt(),
         button_1 = 0xFF459984.toInt(),
@@ -55,6 +68,11 @@ object Themes {
         collapsible_header = 0xFF878787.toInt(),
         icon = 0xFFCBCBCB.toInt(),
         h1 = 0xFFCACACA.toInt(),
+        bg_4 = 0xFF2E324D.toInt(),
+        bg_display = 0xFF000010.toInt(),
+        media_background = 0xFF6D8C99.toInt(),
+        button_1_selected = 0xFF5DB89F.toInt(),
+        progressbar = 0xFF3D4E36.toInt(),
     )
 
     // Rama
@@ -66,14 +84,20 @@ object Themes {
         accent_1 = 0xFFABD68E.toInt(),
         accent_2 = 0xFFCDC58B.toInt(),
         accent_3 = 0xFFDCD07C.toInt(),
+        accent_4 = 0xFF6D9978.toInt(),
         disabled = 0xFF888888.toInt(),
         input = 0xFF161f16.toInt(),
         button_1 = 0xFF45995a.toInt(),
         button_2 = 0xFFb8e39d.toInt(),
         danger = 0xFFDC6364.toInt(),
-        collapsible_header = 0xff8cde285.toInt(),
+        collapsible_header = 0xFF8DE285.toInt(),
         icon = 0xFFd4efc3.toInt(),
         h1 = 0xFFABD68E.toInt(),
+        bg_4 = 0xFF3A4D2E.toInt(),
+        bg_display = 0xFF000A00.toInt(),
+        media_background = 0xFF6D9978.toInt(),
+        button_1_selected = 0xFFC4E7AD.toInt(),
+        progressbar = 0xFF4F6B45.toInt(),
     )
 
     // Catppuccin Mocha
@@ -85,6 +109,7 @@ object Themes {
         accent_1 = 0xFFA6E3A1.toInt(),
         accent_2 = 0xFFF9E2AF.toInt(),
         accent_3 = 0xFFFFD700.toInt(),
+        accent_4 = 0xFF89B4FA.toInt(),
         disabled = 0xFF6C7086.toInt(),
         input = 0xFF181825.toInt(),
         button_1 = 0xFF89B4FA.toInt(),
@@ -93,6 +118,11 @@ object Themes {
         collapsible_header = 0xFFB4BEFE.toInt(),
         icon = 0xFFCDD6F4.toInt(),
         h1 = 0xFFCBA6F7.toInt(),
+        bg_4 = 0xFF585B70.toInt(),
+        bg_display = 0xFF11111B.toInt(),
+        media_background = 0xFF89B4FA.toInt(),
+        button_1_selected = 0xFFDDBBFF.toInt(),
+        progressbar = 0xFF5E4A73.toInt(),
     )
 
     val CATPPUCCIN_LATTE = Palette(
@@ -100,21 +130,23 @@ object Themes {
         bg_1 = 0xFFEFF1F5.toInt(),
         bg_2 = 0xFFCCD0DA.toInt(),
         bg_3 = 0xFFBCC0CC.toInt(),
-
         accent_1 = 0xFF40A02B.toInt(),
         accent_2 = 0xFFDF8E1D.toInt(),
         accent_3 = 0xFFFE640B.toInt(),
-
+        accent_4 = 0xFF04A5E5.toInt(),
         disabled = 0xFF9CA0B0.toInt(),
         input = 0xFFE6E9EF.toInt(),
-
         button_1 = 0xFF1E66F5.toInt(),
         button_2 = 0xFF04A5E5.toInt(),
-
         danger = 0xFFD20F39.toInt(),
         collapsible_header = 0xFF7287FD.toInt(),
         icon = 0xFF4C4F69.toInt(),
-        h1 = 0xFF8839EF.toInt()
+        h1 = 0xFF8839EF.toInt(),
+        bg_4 = 0xFFBCC0CC.toInt(),
+        bg_display = 0xFFDCE0E8.toInt(),
+        media_background = 0xFF04A5E5.toInt(),
+        button_1_selected = 0xFFA16CF5.toInt(),
+        progressbar = 0xFFB7D6A8.toInt(),
     )
 
 
@@ -127,6 +159,7 @@ object Themes {
         accent_1 = 0xFF50FA7B.toInt(),
         accent_2 = 0xFFF1FA8C.toInt(),
         accent_3 = 0xFFFFB86C.toInt(),
+        accent_4 = 0xFF8BE9FD.toInt(),
         disabled = 0xFF6272A4.toInt(),
         input = 0xFF21222C.toInt(),
         button_1 = 0xFFBD93F9.toInt(),
@@ -135,9 +168,14 @@ object Themes {
         collapsible_header = 0xFFBD93F9.toInt(),
         icon = 0xFFF8F8F2.toInt(),
         h1 = 0xFFBD93F9.toInt(),
+        bg_4 = 0xFF4F5163.toInt(),
+        bg_display = 0xFF1A1B26.toInt(),
+        media_background = 0xFF8BE9FD.toInt(),
+        button_1_selected = 0xFFD1B3FF.toInt(),
+        progressbar = 0xFF5A4A75.toInt(),
     )
 
-    // Melange Dark
+    // Mélange Dark
     val MELANGE = Palette(
         foreground = 0xFFECE1D7.toInt(),
         bg_1 = 0xFF292522.toInt(),
@@ -146,6 +184,7 @@ object Themes {
         accent_1 = 0xFF78997A.toInt(),
         accent_2 = 0xFFEBC06D.toInt(),
         accent_3 = 0xFFE49B5D.toInt(),
+        accent_4 = 0xFF8CBBA3.toInt(),
         disabled = 0xFF867462.toInt(),
         input = 0xFF211E1B.toInt(),
         button_1 = 0xFF7F91B2.toInt(),
@@ -154,6 +193,11 @@ object Themes {
         collapsible_header = 0xFFEBC06D.toInt(),
         icon = 0xFFECE1D7.toInt(),
         h1 = 0xFFEBC06D.toInt(),
+        bg_4 = 0xFF4D463E.toInt(),
+        bg_display = 0xFF161311.toInt(),
+        media_background = 0xFF8CBBA3.toInt(),
+        button_1_selected = 0xFFF4D18D.toInt(),
+        progressbar = 0xFF5C4A2B.toInt(),
     )
 
     // Tokyo Night
@@ -165,6 +209,7 @@ object Themes {
         accent_1 = 0xFF9ECE6A.toInt(),
         accent_2 = 0xFFE0AF68.toInt(),
         accent_3 = 0xFFFF9E64.toInt(),
+        accent_4 = 0xFF2AC3DE.toInt(),
         disabled = 0xFF565F89.toInt(),
         input = 0xFF16161E.toInt(),
         button_1 = 0xFF7AA2F7.toInt(),
@@ -173,5 +218,10 @@ object Themes {
         collapsible_header = 0xFF7AA2F7.toInt(),
         icon = 0xFFC0CAF5.toInt(),
         h1 = 0xFF7AA2F7.toInt(),
+        bg_4 = 0xFF2E324D.toInt(),
+        bg_display = 0xFF0D0E17.toInt(),
+        media_background = 0xFF73DACA.toInt(),
+        button_1_selected = 0xFFA3C1FF.toInt(),
+        progressbar = 0xFF34456B.toInt(),
     )
 }

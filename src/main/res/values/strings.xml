@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- People/Entity -->
+    <!-- Person/Entity -->
     <string name="app_creator" translatable="false">Pombo</string>
     <string name="contributor_isotjs" translatable="false">isotjs</string>
     <string name="product_jersey_creator" translatable="false">Sarah Cadigan-Fried</string>
@@ -11,9 +11,11 @@
     <string name="product_hackernoon_creator" translatable="false">HackerNoon</string>
 
     <!-- Product -->
-    <string name="radio_theme_mako" translatable="false">Mako</string>
-    <string name="radio_theme_rama" translatable="false">Rama</string>
-    <string name="radio_theme_teyin" translatable="false">Teyin</string>
+    <string name="product_rama" translatable="false">Rama</string>
+    <string name="product_mako" translatable="false">Mako</string>
+    <string name="product_teyin" translatable="false">Teyin</string>
+    <string name="product_tui" translatable="false">Tui</string>
+    <string name="product_txori" translatable="false">Txori</string>
     <string name="product_hackernoon_name" translatable="false">Pixel Icon Library</string>
     <string name="product_jersey_name" translatable="false">Jersey 25</string>
     <string name="product_dracula_name" translatable="false">Dracula</string>
