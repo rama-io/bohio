@@ -4,6 +4,10 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.net.Uri
 import org.json.JSONObject
+import com.rama.bohio.objects.PrefFontStyle
+import com.rama.bohio.objects.PrefKeys
+import com.rama.bohio.objects.PrefLanguage
+import com.rama.bohio.objects.PrefTheme
 
 /**
  * Shared preferences base for all Rama apps.
@@ -28,63 +32,7 @@ abstract class PrefsManager protected constructor(context: Context) {
      * Theme applied on first run. Override per app, e.g.
      * `override val defaultTheme = Theme.TEYIN`.
      */
-    protected open val defaultTheme: String = Theme.RAMA
-
-    object PrefKeys {
-        const val APPS_ICONS = "apps:icons"
-        const val FONT_STYLE = "font:style"
-        const val FONT_CUSTOM_PATH = "font:custom_path"
-        const val APP_LANGUAGE = "app:language"
-        const val SYSTEM_BAR_VISIBLE = "system:bar:visible"
-        const val SYSTEM_PREVENT_ROTATION = "system:prevent_rotation"
-
-        const val APP_THEME_NAME = "app:theme:name"
-        const val APP_THEME_H1 = "app:theme:clock"
-        const val APP_THEME_FOREGROUND = "app:theme:foreground"
-        const val APP_THEME_BG_1 = "app:theme:bg_1"
-        const val APP_THEME_BG_2 = "app:theme:bg_2"
-        const val APP_THEME_BG_3 = "app:theme:bg_3"
-        const val APP_THEME_ACCENT_1 = "app:theme:accent_1"
-        const val APP_THEME_ACCENT_2 = "app:theme:accent_2"
-        const val APP_THEME_ACCENT_3 = "app:theme:accent_3"
-        const val APP_THEME_DISABLED = "app:theme:disabled"
-        const val APP_THEME_INPUT = "app:theme:input"
-        const val APP_THEME_BUTTON_1 = "app:theme:button_1"
-        const val APP_THEME_BUTTON_2 = "app:theme:button_2"
-        const val APP_THEME_DANGER = "app:theme:danger"
-        const val APP_THEME_COLLAPSIBLE_HEADER = "app:theme:collapsible_header"
-        const val APP_THEME_ICON = "app:theme:icon"
-
-        const val SETTINGS_SECTION_FONTS = "settings:section:fonts"
-        const val SETTINGS_SECTION_SYSTEM = "settings:section:system"
-        const val SETTINGS_SECTION_LANGUAGE = "settings:section:language"
-        const val SETTINGS_SECTION_THEMES = "settings:section:themes"
-
-        const val APP_UI_SCALE = "app:ui_scale"
-    }
-
-    object FontStyle {
-        const val DEFAULT = "default"
-        const val JERSEY_25 = "jersey-25"
-        const val CUSTOM = "custom"
-    }
-
-    object Theme {
-        const val MAKO = "mako"
-        const val RAMA = "rama"
-        const val TEYIN = "teyin"
-        const val CATPPUCCIN_MOCHA = "catppuccin_mocha"
-        const val CATPPUCCIN_LATTE = "catppuccin_latte"
-        const val DRACULA = "dracula"
-        const val MELANGE = "melange"
-        const val TOKYO_NIGHT = "tokyo_night"
-        const val CUSTOM = "custom"
-    }
-
-    object Language {
-        const val SYSTEM = "system"
-        const val FALLBACK = "en"
-    }
+    protected open val defaultTheme: String = PrefTheme.RAMA
 
     fun isSystemBarVisible(): Boolean =
         prefs.getBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)
@@ -114,7 +62,7 @@ abstract class PrefsManager protected constructor(context: Context) {
         prefs.edit().putInt(key, color).apply()
 
     fun getAppLanguage(): String {
-        return prefs.getString(PrefKeys.APP_LANGUAGE, Language.SYSTEM) ?: Language.SYSTEM
+        return prefs.getString(PrefKeys.APP_LANGUAGE, PrefLanguage.SYSTEM) ?: PrefLanguage.SYSTEM
     }
 
     fun setAppLanguage(language: String) {
@@ -155,8 +103,8 @@ abstract class PrefsManager protected constructor(context: Context) {
         if (prefs.contains(PrefKeys.APP_LANGUAGE)) return
 
         val editor = prefs.edit()
-            .putString(PrefKeys.FONT_STYLE, FontStyle.JERSEY_25)
-            .putString(PrefKeys.APP_LANGUAGE, Language.SYSTEM)
+            .putString(PrefKeys.FONT_STYLE, PrefFontStyle.JERSEY_25)
+            .putString(PrefKeys.APP_LANGUAGE, PrefLanguage.SYSTEM)
             .putFloat(PrefKeys.APP_UI_SCALE, 1f)
             .putBoolean(PrefKeys.APPS_ICONS, false)
             .putBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)

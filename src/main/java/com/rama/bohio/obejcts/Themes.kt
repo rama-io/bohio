@@ -1,4 +1,4 @@
-package com.rama.bohio
+package com.rama.bohio.objects
 
 object Themes {
     data class Palette(
