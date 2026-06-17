@@ -9,6 +9,7 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.TextView
+import com.rama.bohio.R
 import com.rama.bohio.objects.PrefKeys
 import com.rama.bohio.objects.PrefTheme
 import com.rama.bohio.objects.Themes
@@ -40,10 +41,7 @@ object ThemeManager {
             bg_3 = get(PrefKeys.APP_THEME_BG_3, base.bg_3),
             bg_4 = get(PrefKeys.APP_THEME_BG_4, base.bg_4),
             bg_display = get(PrefKeys.APP_THEME_BG_DISPLAY, base.bg_display),
-            media_background = get(
-                PrefKeys.APP_THEME_MEDIA_BACKGROUND,
-                base.media_background
-            ),
+            media_background = get(PrefKeys.APP_THEME_MEDIA_BACKGROUND, base.media_background),
             accent_1 = get(PrefKeys.APP_THEME_ACCENT_1, base.accent_1),
             accent_2 = get(PrefKeys.APP_THEME_ACCENT_2, base.accent_2),
             accent_3 = get(PrefKeys.APP_THEME_ACCENT_3, base.accent_3),
@@ -51,10 +49,7 @@ object ThemeManager {
             disabled = get(PrefKeys.APP_THEME_DISABLED, base.disabled),
             input = get(PrefKeys.APP_THEME_INPUT, base.input),
             button_1 = get(PrefKeys.APP_THEME_BUTTON_1, base.button_1),
-            button_1_selected = get(
-                PrefKeys.APP_THEME_BUTTON_1_SELECTED,
-                base.button_1_selected
-            ),
+            button_1_selected = get(PrefKeys.APP_THEME_BUTTON_1_SELECTED, base.button_1_selected),
             button_2 = get(PrefKeys.APP_THEME_BUTTON_2, base.button_2),
             danger = get(PrefKeys.APP_THEME_DANGER, base.danger),
             collapsible_header = get(
@@ -82,12 +77,7 @@ object ThemeManager {
         applyToView(context, view, palette, typeface)
         if (view is ViewGroup) {
             for (i in 0 until view.childCount)
-                applyRecursively(
-                    context,
-                    view.getChildAt(i),
-                    palette,
-                    typeface
-                )
+                applyRecursively(context, view.getChildAt(i), palette, typeface)
         }
     }
 
@@ -97,7 +87,6 @@ object ThemeManager {
         palette: Themes.Palette,
         typeface: android.graphics.Typeface?
     ) {
-        // Font + text color
         if (view is TextView) {
             typeface?.let { view.typeface = it }
             when (view) {
@@ -119,7 +108,6 @@ object ThemeManager {
             }
         }
 
-        // Icon tint
         if (view is ImageView) {
             val tint = view.imageTintList?.defaultColor
             if (tint != null) {
@@ -128,77 +116,86 @@ object ThemeManager {
             }
         }
 
-        // Background
         val currentColor = resolveDrawableColor(view.background ?: return) ?: return
         val mapped = mapColor(context, currentColor, palette) ?: return
         view.setBackgroundColor(mapped)
     }
 
     private val builtInThemes = listOf(
-        Themes.TEYIN,
-        Themes.MAKO,
-        Themes.RAMA,
-        Themes.CATPPUCCIN_MOCHA,
-        Themes.CATPPUCCIN_LATTE,
-        Themes.DRACULA,
-        Themes.MELANGE,
-        Themes.TOKYO_NIGHT
+        Themes.TEYIN, Themes.MAKO, Themes.RAMA,
+        Themes.CATPPUCCIN_MOCHA, Themes.CATPPUCCIN_LATTE,
+        Themes.DRACULA, Themes.MELANGE, Themes.TOKYO_NIGHT,
     )
 
-    private fun createColorMap(
-        context: Context,
-        target: Themes.Palette
-    ): Map<Int, Int> {
+    /**
+     * Builds a color→slot map covering every built-in palette, the live custom
+     * palette, AND the XML resource colors declared in colors.xml (so layouts
+     * that reference @color/bg_1 etc. are also remapped correctly).
+     */
+    private fun createColorMap(context: Context, target: Themes.Palette): Map<Int, Int> {
         val custom = buildCustomPalette(context)
-
+        val res = context.resources
         val palettes = builtInThemes + custom
 
         return buildMap {
-            palettes.forEach { source ->
-                put(source.bg_1, target.bg_1)
-                put(source.bg_2, target.bg_2)
-                put(source.bg_3, target.bg_3)
-                put(source.bg_4, target.bg_4)
-                put(source.bg_display, target.bg_display)
-
-                put(source.foreground, target.foreground)
-
-                put(source.accent_1, target.accent_1)
-                put(source.accent_2, target.accent_2)
-                put(source.accent_3, target.accent_3)
-                put(source.accent_4, target.accent_4)
-
-                put(source.button_1, target.button_1)
-                put(source.button_1_selected, target.button_1_selected)
-                put(source.button_2, target.button_2)
-
-                put(source.disabled, target.disabled)
-                put(source.input, target.input)
-                put(source.danger, target.danger)
-
-                put(source.collapsible_header, target.collapsible_header)
-                put(source.icon, target.icon)
-
-                put(source.h1, target.h1)
-
-                put(source.bg_display, target.bg_display)
-                put(source.media_background, target.media_background)
-                put(source.progressbar, target.progressbar)
+            // ── Slot helper — write every source palette's value for this slot ──
+            fun slot(selector: (Themes.Palette) -> Int, dest: Int) {
+                palettes.forEach { put(selector(it), dest) }
             }
+
+            slot({ it.h1 }, target.h1)
+            slot({ it.foreground }, target.foreground)
+            slot({ it.icon }, target.icon)
+
+            slot({ it.bg_1 }, target.bg_1)
+            slot({ it.bg_2 }, target.bg_2)
+            slot({ it.bg_3 }, target.bg_3)
+            slot({ it.bg_4 }, target.bg_4)
+            slot({ it.bg_display }, target.bg_display)
+
+            slot({ it.accent_1 }, target.accent_1)
+            slot({ it.accent_2 }, target.accent_2)
+            slot({ it.accent_3 }, target.accent_3)
+            slot({ it.accent_4 }, target.accent_4)
+
+            slot({ it.disabled }, target.disabled)
+            slot({ it.input }, target.input)
+
+            slot({ it.button_1 }, target.button_1)
+            slot({ it.button_1_selected }, target.button_1_selected)
+            slot({ it.button_2 }, target.button_2)
+
+            slot({ it.danger }, target.danger)
+            slot({ it.collapsible_header }, target.collapsible_header)
+            slot({ it.media_background }, target.media_background)
+            slot({ it.progressbar }, target.progressbar)
+            
+            put(res.getColor(R.color.h1), target.h1)
+            put(res.getColor(R.color.foreground), target.foreground)
+            put(res.getColor(R.color.icon), target.icon)
+            put(res.getColor(R.color.bg_1), target.bg_1)
+            put(res.getColor(R.color.bg_2), target.bg_2)
+            put(res.getColor(R.color.bg_3), target.bg_3)
+            put(res.getColor(R.color.bg_4), target.bg_4)
+            put(res.getColor(R.color.bg_display), target.bg_display)
+            put(res.getColor(R.color.accent_1), target.accent_1)
+            put(res.getColor(R.color.accent_2), target.accent_2)
+            put(res.getColor(R.color.accent_3), target.accent_3)
+            put(res.getColor(R.color.accent_4), target.accent_4)
+            put(res.getColor(R.color.disabled), target.disabled)
+            put(res.getColor(R.color.input), target.input)
+            put(res.getColor(R.color.button_1), target.button_1)
+            put(res.getColor(R.color.button_1_selected), target.button_1_selected)
+            put(res.getColor(R.color.button_2), target.button_2)
+            put(res.getColor(R.color.danger), target.danger)
+            put(res.getColor(R.color.collapsible_header), target.collapsible_header)
+            put(res.getColor(R.color.media_background), target.media_background)
+            put(res.getColor(R.color.progressbar), target.progressbar)
         }
     }
 
-    /**
-     * Maps a runtime color value to its semantic slot in [palette] by comparing
-     * against every known palette variant (including the live custom palette).
-     */
-    private fun mapColor(
-        context: Context,
-        color: Int,
-        palette: Themes.Palette
-    ): Int? {
-        return createColorMap(context, palette)[color]
-    }
+    private fun mapColor(context: Context, color: Int, palette: Themes.Palette): Int? =
+        createColorMap(context, palette)[color]
 
     private fun resolveDrawableColor(drawable: android.graphics.drawable.Drawable): Int? =
         (drawable as? ColorDrawable)?.color
