@@ -30,15 +30,15 @@ class WdCollapsibleSection @JvmOverloads constructor(
         orientation = VERTICAL
         LayoutInflater.from(context).inflate(R.layout.wd_collapsible_section, this, true)
 
-        header    = findViewById(R.id.section_header)
+        header = findViewById(R.id.section_header)
         indicator = findViewById(R.id.section_indicator)
         labelView = findViewById(R.id.section_label)
-        content   = findViewById(R.id.section_content)
+        content = findViewById(R.id.section_content)
 
         attrs?.let {
             val ta = context.obtainStyledAttributes(it, R.styleable.WdCollapsibleSection)
             labelView.text = ta.getString(R.styleable.WdCollapsibleSection_header) ?: ""
-            key            = resolveKey(ta.getString(R.styleable.WdCollapsibleSection_key))
+            key = resolveKey(ta.getString(R.styleable.WdCollapsibleSection_key))
             defaultExpanded = ta.getBoolean(R.styleable.WdCollapsibleSection_defaultExpanded, true)
             ta.recycle()
         }
@@ -71,7 +71,9 @@ class WdCollapsibleSection @JvmOverloads constructor(
         if (raw == null) return null
         return try {
             PrefKeys::class.java.getDeclaredField(raw).get(null) as? String
-        } catch (_: Exception) { null }
+        } catch (_: Exception) {
+            null
+        }
     }
 
     override fun onFinishInflate() {
@@ -82,13 +84,21 @@ class WdCollapsibleSection @JvmOverloads constructor(
         children.forEach { removeView(it); content.addView(it) }
     }
 
+    fun addItem(view: View) {
+        content.addView(view)
+    }
+
+    fun clearItems() {
+        content.removeAllViews()
+    }
+
     private fun isExpanded() = content.visibility == View.VISIBLE
 
     private fun applyState(expanded: Boolean) {
         content.visibility = if (expanded) View.VISIBLE else View.GONE
         indicator.text = context.getString(
             if (expanded) R.string.settings_section_collapse_indicator
-            else          R.string.settings_section_expand_indicator
+            else R.string.settings_section_expand_indicator
         )
     }
 
