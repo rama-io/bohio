@@ -58,6 +58,11 @@ object ThemeManager {
             ),
             icon = get(PrefKeys.APP_THEME_ICON, base.icon),
             progressbar = get(PrefKeys.APP_THEME_PROGRESS_BAR, base.progressbar),
+            progressbar_rest = get(PrefKeys.APP_THEME_PROGRESS_BAR_REST, base.progressbar_rest),
+            suggestion = get(
+                PrefKeys.APP_THEME_SUGGESTION,
+                base.suggestion
+            ),
         )
     }
 
@@ -169,7 +174,9 @@ object ThemeManager {
             slot({ it.collapsible_header }, target.collapsible_header)
             slot({ it.media_background }, target.media_background)
             slot({ it.progressbar }, target.progressbar)
-            
+            slot({ it.progressbar_rest }, target.progressbar_rest)
+            slot({ it.suggestion }, target.suggestion)
+
             put(res.getColor(R.color.h1), target.h1)
             put(res.getColor(R.color.foreground), target.foreground)
             put(res.getColor(R.color.icon), target.icon)
@@ -191,6 +198,8 @@ object ThemeManager {
             put(res.getColor(R.color.collapsible_header), target.collapsible_header)
             put(res.getColor(R.color.media_background), target.media_background)
             put(res.getColor(R.color.progressbar), target.progressbar)
+            put(res.getColor(R.color.progressbar_2), target.progressbar_rest)
+            put(res.getColor(R.color.suggestion), target.suggestion)
         }
     }
 

@@ -27,4 +27,6 @@
 
     <color name="media_background">#5E9FA3</color>
     <color name="progressbar">#31585B</color>
+    <color name="progressbar_2">#4A6E3A</color>
+    <color name="suggestion">#71ACC7</color>
 </resources>

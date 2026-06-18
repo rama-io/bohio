@@ -10,6 +10,7 @@ object PrefKeys {
     val SYSTEM_PREVENT_SLEEP = "system:prevent_sleeping"
 
     val APP_THEME_PROGRESS_BAR = "app:theme:progress"
+    val APP_THEME_PROGRESS_BAR_REST = "app:theme:progress_rest"
     val APP_THEME_MEDIA_BACKGROUND = "app:theme:media_background"
     val APP_THEME_BG_DISPLAY = "app:theme:bg_display"
 
@@ -34,6 +35,7 @@ object PrefKeys {
     val APP_THEME_DANGER = "app:theme:danger"
     val APP_THEME_COLLAPSIBLE_HEADER = "app:theme:collapsible_header"
     val APP_THEME_ICON = "app:theme:icon"
+    val APP_THEME_SUGGESTION = "app:theme:suggestion"
 
     val SETTINGS_SECTION_FONTS = "settings:section:fonts"
     val SETTINGS_SECTION_SYSTEM = "settings:section:system"

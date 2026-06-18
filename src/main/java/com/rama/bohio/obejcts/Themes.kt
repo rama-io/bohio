@@ -23,6 +23,8 @@ object Themes {
         val icon: Int,
         val media_background: Int,
         val progressbar: Int,
+        val progressbar_rest: Int,
+        val suggestion: Int,
     )
 
     // Teyin (default)
@@ -48,6 +50,8 @@ object Themes {
         h1 = 0xFFEAE6DF.toInt(),
         media_background = 0xFF5E9FA3.toInt(),
         progressbar = 0xFF31585B.toInt(),
+        progressbar_rest = 0xFF3F7268.toInt(),
+        suggestion = 0xFF6A9FCF.toInt(),
     )
 
     // Mako
@@ -73,6 +77,8 @@ object Themes {
         media_background = 0xFF6D8C99.toInt(),
         button_1_selected = 0xFF5DB89F.toInt(),
         progressbar = 0xFF3D4E36.toInt(),
+        progressbar_rest = 0xFF4A6E3A.toInt(),
+        suggestion = 0xFF71ACC7.toInt(),
     )
 
     // Rama
@@ -98,6 +104,8 @@ object Themes {
         media_background = 0xFF6D9978.toInt(),
         button_1_selected = 0xFFC4E7AD.toInt(),
         progressbar = 0xFF4F6B45.toInt(),
+        progressbar_rest = 0xFF4D7A4E.toInt(),
+        suggestion = 0xFF7CCF8E.toInt(),
     )
 
     // Catppuccin Mocha
@@ -123,6 +131,8 @@ object Themes {
         media_background = 0xFF89B4FA.toInt(),
         button_1_selected = 0xFFDDBBFF.toInt(),
         progressbar = 0xFF5E4A73.toInt(),
+        progressbar_rest = 0xFF587D52.toInt(),
+        suggestion = 0xFF89DCEB.toInt(),
     )
 
     val CATPPUCCIN_LATTE = Palette(
@@ -147,6 +157,8 @@ object Themes {
         media_background = 0xFF04A5E5.toInt(),
         button_1_selected = 0xFFA16CF5.toInt(),
         progressbar = 0xFFB7D6A8.toInt(),
+        progressbar_rest = 0xFF8CCB9A.toInt(),
+        suggestion = 0xFF04A5E5.toInt(),
     )
 
 
@@ -173,6 +185,8 @@ object Themes {
         media_background = 0xFF8BE9FD.toInt(),
         button_1_selected = 0xFFD1B3FF.toInt(),
         progressbar = 0xFF5A4A75.toInt(),
+        progressbar_rest = 0xFF3E5F4A.toInt(),
+        suggestion = 0xFF8BE9FD.toInt(),
     )
 
     // Mélange Dark
@@ -198,6 +212,8 @@ object Themes {
         media_background = 0xFF8CBBA3.toInt(),
         button_1_selected = 0xFFF4D18D.toInt(),
         progressbar = 0xFF5C4A2B.toInt(),
+        progressbar_rest = 0xFF5A6650.toInt(),
+        suggestion = 0xFF8CBBA3.toInt(),
     )
 
     // Tokyo Night
@@ -223,5 +239,7 @@ object Themes {
         media_background = 0xFF73DACA.toInt(),
         button_1_selected = 0xFFA3C1FF.toInt(),
         progressbar = 0xFF34456B.toInt(),
+        progressbar_rest = 0xFF3B5A4F.toInt(),
+        suggestion = 0xFF73DACA.toInt(),
     )
 }
