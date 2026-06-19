@@ -132,18 +132,12 @@ object ThemeManager {
         Themes.DRACULA, Themes.MELANGE, Themes.TOKYO_NIGHT,
     )
 
-    /**
-     * Builds a color→slot map covering every built-in palette, the live custom
-     * palette, AND the XML resource colors declared in colors.xml (so layouts
-     * that reference @color/bg_1 etc. are also remapped correctly).
-     */
     private fun createColorMap(context: Context, target: Themes.Palette): Map<Int, Int> {
         val custom = buildCustomPalette(context)
         val res = context.resources
         val palettes = builtInThemes + custom
 
         return buildMap {
-            // ── Slot helper — write every source palette's value for this slot ──
             fun slot(selector: (Themes.Palette) -> Int, dest: Int) {
                 palettes.forEach { put(selector(it), dest) }
             }
