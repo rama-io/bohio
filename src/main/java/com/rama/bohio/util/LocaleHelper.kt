@@ -6,14 +6,6 @@ import android.os.Build
 import com.rama.bohio.objects.PrefLanguage
 import java.util.Locale
 
-/**
- * Wraps a [Context] with the user-selected locale.
- *
- * Reads the language pref directly from SharedPreferences instead of going
- * through [PrefsManager.getInstance], because this is called from
- * [attachBaseContext] — before the app subclass has had a chance to call
- * [PrefsManager.register].
- */
 object LocaleHelper {
 
     fun wrapContext(context: Context): Context {
@@ -42,7 +34,7 @@ object LocaleHelper {
         }
     }
 
-    /** Returns the BCP-47 tag for the currently active locale. */
+    // Returns the BCP-47 tag for the currently active locale.
     fun currentLanguageTag(context: Context): String =
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
             context.resources.configuration.locales[0].toLanguageTag()
@@ -50,11 +42,15 @@ object LocaleHelper {
             @Suppress("DEPRECATION")
             context.resources.configuration.locale.toLanguageTag()
 
-    /**
-     * Reads the language pref directly from SharedPreferences.
-     * Avoids [PrefsManager.getInstance] which isn't safe this early in the
-     * activity lifecycle (before [PrefsManager.register] has been called).
-     */
+    fun getCurrentLocale(configuration: Configuration): Locale {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            configuration.locales[0]
+        } else {
+            @Suppress("DEPRECATION")
+            configuration.locale
+        }
+    }
+
     private fun readLanguagePref(context: Context): String {
         return context
             .getSharedPreferences("settings", Context.MODE_PRIVATE)

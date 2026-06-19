@@ -13,17 +13,9 @@ import androidx.activity.ComponentActivity
 import com.rama.bohio.managers.FontManager
 import com.rama.bohio.managers.ThemeManager
 import com.rama.bohio.objects.PrefKeys
-import com.rama.bohio.objects.PrefTheme
 import com.rama.bohio.util.Dimens.dpToPx
 import com.rama.bohio.util.LocaleHelper
 
-/**
- * Base activity for all Rama apps.
- *
- * Never calls [com.rama.bohio.managers.PrefsManager.getInstance] internally —
- * all pref reads use [rawPrefs] directly so this class is safe to use before
- * any app subclass has called [com.rama.bohio.managers.PrefsManager.register].
- */
 abstract class BohioActivity : ComponentActivity() {
 
     private var lastKnownLanguage: String? = null
@@ -173,9 +165,13 @@ abstract class BohioActivity : ComponentActivity() {
         window.navigationBarColor = palette.bg_1
     }
 
+    protected open fun isSystemBarVisible(): Boolean {
+        return rawPrefs(this)
+            .getBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)
+    }
+
     private fun applySystemBarVisibility() {
-        val visible = rawPrefs(this).getBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)
-        if (visible) {
+        if (isSystemBarVisible()) {
             @Suppress("DEPRECATION")
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
         } else {
@@ -191,11 +187,6 @@ abstract class BohioActivity : ComponentActivity() {
 
     private fun contentRoot(): View = findViewById(android.R.id.content)
 
-    /**
-     * Opens SharedPreferences directly — never goes through PrefsManager.
-     * Safe at any point in the activity lifecycle, including [attachBaseContext]
-     * and [onCreate], before the app subclass has called PrefsManager.register().
-     */
     private fun rawPrefs(context: Context): SharedPreferences =
         context.getSharedPreferences("settings", Context.MODE_PRIVATE)
 }
