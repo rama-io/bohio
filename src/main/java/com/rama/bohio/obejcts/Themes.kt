@@ -29,6 +29,7 @@ object Themes {
 
     // Teyin (default)
     val TEYIN = Palette(
+        h1 = 0xFFEAE6DE.toInt(),
         foreground = 0xFFEAE6DF.toInt(),
         bg_1 = 0xFF0E181A.toInt(),
         bg_2 = 0xFF162A2E.toInt(),
@@ -47,7 +48,6 @@ object Themes {
         danger = 0xFFB83A2D.toInt(),
         collapsible_header = 0xFF7A9495.toInt(),
         icon = 0xFFC8C2B8.toInt(),
-        h1 = 0xFFEAE6DF.toInt(),
         media_background = 0xFF5E9FA3.toInt(),
         progressbar = 0xFF31585B.toInt(),
         progressbar_rest = 0xFF3F7268.toInt(),
