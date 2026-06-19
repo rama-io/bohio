@@ -10,13 +10,19 @@ git submodule update --init --recursive
 ```
 
 Add in the app's `settings.gradle`:
-```groovy
-include(":app", ":bohio")
-project(":bohio").projectDir = file("bohio")
+```kotlin
+include(":app")
+include(":bohio")
+
+// Activate For Release
+//project(":bohio").projectDir = file("bohio")
+
+// Activate For Bohio Development (and locate your local source)
+project(":bohio").projectDir = file("../git-mod_bohio")
 ```
 
 Add in the app's `app/build.gradle`:
-```groovy
+```kotlin
 dependencies {
     implementation(project(":bohio"))
 }
@@ -33,7 +39,7 @@ Make sure the app's theme extends `Theme.Rama.Base` in `themes.xml`.
 
 For F-Droid, add `submodules: true` to the relevant build entry in the app's metadata so `git submodule update --init --recursive` runs after checkout. Keep the `bohio` repo public and avoid rewriting history on any commit a published app version's submodule pointer references.
 
-## Maintanence
+## Maintenance
 
 Update submodule
 ```bash

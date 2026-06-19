@@ -9,33 +9,12 @@ import com.rama.bohio.objects.PrefKeys
 import com.rama.bohio.objects.PrefLanguage
 import com.rama.bohio.objects.PrefTheme
 
-/**
- * Shared preferences base for all Rama apps.
- *
- * Holds the common keys/enums, shared getters/setters, and export/import/clear
- * logic. Each app provides its own subclass + singleton (see Teyin's
- * PrefsManager for the pattern):
- *
- *   class PrefsManager private constructor(context: Context) : BohioPrefsManager(context) {
- *       override val defaultTheme = BohioPrefsManager.Theme.TEYIN
- *       object FileKeys { ... app-specific keys ... }
- *       override fun applyAppDefaults(editor: SharedPreferences.Editor) { ... }
- *       companion object { fun getInstance(context: Context): PrefsManager = ... }
- *   }
- */
 abstract class PrefsManager protected constructor(context: Context) {
 
     val prefs: SharedPreferences =
         context.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
-    /**
-     * Theme applied on first run. Override per app, e.g.
-     * `override val defaultTheme = Theme.TEYIN`.
-     */
     protected open val defaultTheme: String = PrefTheme.RAMA
-
-    fun isSystemBarVisible(): Boolean =
-        prefs.getBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)
 
     fun getFontStyle(): String =
         prefs.getString(PrefKeys.FONT_STYLE, "") ?: ""
@@ -90,15 +69,6 @@ abstract class PrefsManager protected constructor(context: Context) {
     fun setString(key: String, value: String) =
         prefs.edit().putString(key, value).apply()
 
-    /**
-     * Populates first-run defaults shared by every app, then delegates to
-     * [applyAppDefaults] for app-specific ones — both in the same editor
-     * transaction. Guarded by [PrefKeys.APP_LANGUAGE] so it's a no-op after
-     * the first run.
-     *
-     * @param sync if true, commits synchronously (used by [clearAllPrefs],
-     *   which needs the defaults written before returning).
-     */
     open fun initPrefs(sync: Boolean = false) {
         if (prefs.contains(PrefKeys.APP_LANGUAGE)) return
 
@@ -106,7 +76,6 @@ abstract class PrefsManager protected constructor(context: Context) {
             .putString(PrefKeys.FONT_STYLE, PrefFontStyle.JERSEY_25)
             .putString(PrefKeys.APP_LANGUAGE, PrefLanguage.SYSTEM)
             .putFloat(PrefKeys.APP_UI_SCALE, 1f)
-            .putBoolean(PrefKeys.APPS_ICONS, false)
             .putBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)
             .putBoolean(PrefKeys.SYSTEM_PREVENT_ROTATION, false)
             .putString(PrefKeys.APP_THEME_NAME, defaultTheme)
@@ -120,10 +89,6 @@ abstract class PrefsManager protected constructor(context: Context) {
         if (sync) editor.commit() else editor.apply()
     }
 
-    /**
-     * Override to add app-specific first-run defaults to the same
-     * editor/transaction used by [initPrefs]. No-op by default.
-     */
     protected open fun applyAppDefaults(editor: SharedPreferences.Editor) {
     }
 
@@ -230,5 +195,19 @@ abstract class PrefsManager protected constructor(context: Context) {
         private val FLOAT_PREF_KEYS = setOf(
             PrefKeys.APP_UI_SCALE
         )
+
+        @Volatile
+        private var instance: PrefsManager? = null
+
+        fun register(prefs: PrefsManager) {
+            instance = prefs
+        }
+
+        fun getInstance(context: Context): PrefsManager =
+            instance ?: error(
+                "PrefsManager.register() has not been called. " +
+                        "Make sure your app's PrefsManager.getInstance() is called before " +
+                        "FontManager or ThemeManager."
+            )
     }
 }
