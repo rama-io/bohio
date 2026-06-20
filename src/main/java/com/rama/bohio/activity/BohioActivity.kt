@@ -140,7 +140,7 @@ abstract class BohioActivity : ComponentActivity() {
                 else sysBars.bottom
                 view.setPadding(
                     sysBars.left + paddingInline,
-                    sysBars.top + paddingBlock,
+                    sysBars.top,
                     sysBars.right + paddingInline,
                     bottomInset + paddingBlock,
                 )
@@ -148,9 +148,9 @@ abstract class BohioActivity : ComponentActivity() {
                 @Suppress("DEPRECATION")
                 view.setPadding(
                     insets.systemWindowInsetLeft + paddingInline,
-                    insets.systemWindowInsetTop + paddingBlock,
+                    paddingBlock, // insets.systemWindowInsetTop
                     insets.systemWindowInsetRight + paddingInline,
-                    insets.systemWindowInsetBottom + paddingBlock,
+                    insets.systemWindowInsetBottom + paddingBlock
                 )
             }
             insets
