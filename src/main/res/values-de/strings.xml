@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- H2 -->
+    <string name="h2_color_picker">Farbe auswählen</string>
+    <!-- H3 -->
+    <string name="h3_contributors">Beitragende</string>
+    <string name="h3_icons">Icons</string>
+    <string name="h3_fonts">Schriftarten</string>
+    <string name="h3_themes">Designs</string>
+    <string name="h3_language">Sprache</string>
+    <string name="h3_system">System</string>
+    <string name="h3_app">App</string>
+
+    <!-- Radio -->
+    <string name="radio_language_system_default">Systemstandard (Fallback auf Englisch)</string>
+
+    <!-- Checkbox -->
+    <string name="checkbox_show_system_bar">Systemleiste anzeigen</string>
+
+    <!-- InputLabel -->
+    <string name="label_zoom">Zoom</string>
+
+    <!-- APP -->
+    <string name="app_background_tasks_desc">Keine Hintergrundprozesse</string>
+    <string name="app_ads_desc">Keine Werbung</string>
+    <string name="app_trackers_desc">Keine Tracker</string>
+    <string name="app_offline_desc">Funktioniert offline</string>
+</resources>

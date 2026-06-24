@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- H2 -->
+    <string name="h2_color_picker">Renk Seç</string>
+    <!-- H3 -->
+    <string name="h3_contributors">Katkıda Bulunanlar</string>
+    <string name="h3_icons">İkonlar</string>
+    <string name="h3_fonts">Yazı Tipleri</string>
+    <string name="h3_themes">Temalar</string>
+    <string name="h3_language">Dil</string>
+    <string name="h3_system">Sistem</string>
+    <string name="h3_app">Uygulama</string>
+
+    <!-- Radio -->
+    <string name="radio_language_system_default">Sistem Varsayılanı (Desteklemiyorsa İngilizce olur)</string>
+
+    <!-- Checkbox -->
+    <string name="checkbox_show_system_bar">Sistem çubuğunu göster</string>
+
+    <!-- InputLabel -->
+    <string name="label_zoom">Yakınlaştırma</string>
+
+    <!-- APP -->
+    <string name="app_background_tasks_desc">Arka Planda işimiz yok!</string>
+    <string name="app_ads_desc">Reklamsız</string>
+    <string name="app_trackers_desc">Takip etmiyoruz!</string>
+    <string name="app_offline_desc">Tamamen Çevrimdışı</string>
+</resources>

@@ -43,6 +43,35 @@
     <string name="license_cc_4" translatable="false">CC 4.0</string>
     <string name="license_mit" translatable="false">MIT</string>
 
+    <!-- H2 -->
+    <string name="h2_color_picker">Pick a Color</string>
+    <!-- H3 -->
+    <string name="h3_contributors">Contributors</string>
+    <string name="h3_icons">Icons</string>
+    <string name="h3_fonts">Fonts</string>
+    <string name="h3_themes">Themes</string>
+    <string name="h3_app">App</string>
+    <string name="h3_language">Language</string>
+    <string name="h3_system">System</string>
+
+    <!-- Radio -->
+    <string name="radio_language_system_default">System Default (fallback to English)</string>
+    <string name="radio_language_english" translatable="false">English</string>
+    <string name="radio_language_german" translatable="false">Deutsch</string>
+    <string name="radio_language_turkish" translatable="false">Türkçe</string>
+
+    <!-- Checkbox -->
+    <string name="checkbox_show_system_bar">Show system bar</string>
+
+    <!-- InputLabel -->
+    <string name="label_zoom">Zoom</string>
+
+    <!-- APP -->
+    <string name="app_background_tasks_desc">No Background Tasks</string>
+    <string name="app_ads_desc">No Ads</string>
+    <string name="app_trackers_desc">No Trackers</string>
+    <string name="app_offline_desc">Works Offline</string>
+
     <!-- Dialog -->
     <string name="toast_invalid_color">Invalid color</string>
     <string name="hint_hex_color" translatable="false">#RRGGBB</string>
