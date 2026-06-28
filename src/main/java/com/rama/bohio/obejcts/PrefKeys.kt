@@ -54,9 +54,7 @@ object PrefKeys {
     const val SETTINGS_SECTION_APPS = "settings:section:apps"
     const val SETTINGS_SECTION_SECURITY = "settings:section:security"
 
-    // Sections:Txori
-
     // Sections:Tui
-
-    // Sections:Teyin
+    const val SETTINGS_SECTION_LIST = "settings:section:list"
+    const val SETTINGS_SECTION_FOLDERS = "settings:section:folders"
 }

@@ -20,10 +20,14 @@
     <string name="colorpicker_theme_background_1">Arka Plan 1</string>
     <string name="colorpicker_theme_background_2">Arka Plan 2</string>
     <string name="colorpicker_theme_background_3">Arka Plan 3</string>
+    <string name="colorpicker_theme_background_4">Arka Plan 4</string>
     <string name="colorpicker_theme_input_background">Giriş Arka Planı</string>
     <string name="colorpicker_theme_button_1_background">Buton 1 Arka Planı</string>
     <string name="colorpicker_theme_button_2_background">Buton 2 Arka Planı</string>
     <string name="colorpicker_theme_danger">Tehlike</string>
+
+    <!-- FilePicker -->
+    <string name="filepicker_font_custom_none">Yazı tipi seçilmedi</string>
 
     <!-- Radio -->
     <string name="radio_language_system_default">Sistem Varsayılanı (Desteklemiyorsa İngilizce olur)</string>
