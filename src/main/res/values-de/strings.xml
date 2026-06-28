@@ -14,6 +14,7 @@
     <string name="h3_language">Sprache</string>
     <string name="h3_system">System</string>
     <string name="h3_app">App</string>
+
     <!-- Button -->
     <string name="btn_go_back">Zurück</string>
     <string name="btn_apply">Anwenden</string>
@@ -43,6 +44,7 @@
     <string name="filepicker_font_custom_none">Keine Schriftart ausgewählt</string>
 
     <!-- Radio -->
+    <string name="radio_default_system">Standard (System)</string>
     <string name="radio_language_system_default">Systemstandard (Fallback auf Englisch)</string>
     <string name="radio_font_custom">Benutzerdefinierte Schriftart</string>
     <string name="radio_theme_rama">Rama</string>

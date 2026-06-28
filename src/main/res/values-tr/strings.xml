@@ -44,6 +44,7 @@
     <string name="filepicker_font_custom_none">Yazı tipi seçilmedi</string>
 
     <!-- Radio -->
+    <string name="radio_default_system">Varsayılan (Sistem)</string>
     <string name="radio_language_system_default">Sistem Varsayılanı (Desteklemiyorsa İngilizce olur)</string>
     <string name="radio_font_custom">Özel yazı tipi</string>
     <string name="radio_theme_rama">Rama</string>
