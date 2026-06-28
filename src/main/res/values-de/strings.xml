@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Activities -->
+    <string name="activity_settings_label">Einstellungen</string>
+    <string name="activity_about_label">Über</string>
+
     <!-- H2 -->
     <string name="h2_color_picker">Farbe auswählen</string>
     <!-- H3 -->
@@ -10,8 +14,15 @@
     <string name="h3_language">Sprache</string>
     <string name="h3_system">System</string>
     <string name="h3_app">App</string>
-
+    <!-- Button -->
+    <string name="btn_go_back">Zurück</string>
+    <string name="btn_apply">Anwenden</string>
+    <string name="btn_clear">Löschen</string>
+    <string name="btn_reset">Zurücksetzen</string>
+    <string name="btn_cancel">Abbrechen</string>
+    <string name="btn_font_custom_pick">Schriftart-Datei auswählen</string>
     <string name="btn_theme_apply_custom">Benutzerdefiniertes Design anwenden</string>
+    <string name="btn_join_discord">Discord beitreten</string>
 
     <!-- ColorPicker -->
     <string name="colorpicker_theme_foreground">Vordergrund</string>
@@ -33,12 +44,20 @@
 
     <!-- Radio -->
     <string name="radio_language_system_default">Systemstandard (Fallback auf Englisch)</string>
+    <string name="radio_font_custom">Benutzerdefinierte Schriftart</string>
+    <string name="radio_theme_rama">Rama</string>
+    <string name="radio_theme_custom">Benutzerdefiniert</string>
 
     <!-- Checkbox -->
     <string name="checkbox_show_system_bar">Systemleiste anzeigen</string>
+    <string name="checkbox_always_show_search_bar">Immer anzeigen</string>
+    <string name="checkbox_prevent_home_screen_rotation">Bildschirmrotation sperren</string>
 
     <!-- InputLabel -->
     <string name="label_zoom">Zoom</string>
+
+    <!-- Toasts -->
+    <string name="toast_invalid_color">Ungültige Farbe</string>
 
     <!-- APP -->
     <string name="app_background_tasks_desc">Keine Hintergrundprozesse</string>

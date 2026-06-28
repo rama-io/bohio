@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Activities -->
+    <string name="activity_settings_label">Settings</string>
+    <string name="activity_about_label">About</string>
+
     <!-- Person/Entity -->
     <string name="app_creator" translatable="false">Pombo</string>
     <string name="contributor_isotjs" translatable="false">isotjs</string>
@@ -54,8 +58,15 @@
     <string name="h3_language">Language</string>
     <string name="h3_system">System</string>
 
+    <!-- Button -->
+    <string name="btn_go_back">Go Back</string>
+    <string name="btn_apply">Apply</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_cancel">Cancel</string>
     <string name="btn_font_custom_pick">Choose Font file</string>
     <string name="btn_theme_apply_custom">Apply Custom Theme</string>
+    <string name="btn_join_discord">Join Discord</string>
 
     <!-- ColorPicker -->
     <string name="colorpicker_theme_foreground">Foreground</string>
@@ -88,12 +99,20 @@
     <string name="radio_language_turkish" translatable="false">Türkçe</string>
     <string name="radio_theme_mono_dark">Mono Dark</string>
     <string name="radio_theme_mono_light">Mono Light</string>
+    <string name="radio_font_custom">Custom font</string>
+    <string name="radio_theme_rama">Rama</string>
+    <string name="radio_theme_custom">Custom</string>
 
     <!-- Checkbox -->
     <string name="checkbox_show_system_bar">Show system bar</string>
+    <string name="checkbox_always_show_search_bar">Always visible</string>
+    <string name="checkbox_prevent_home_screen_rotation">Lock screen rotation</string>
 
     <!-- InputLabel -->
     <string name="label_zoom">Zoom</string>
+
+    <!-- Toasts -->
+    <string name="toast_invalid_color">Invalid color</string>
 
     <!-- APP -->
     <string name="app_background_tasks_desc">No Background Tasks</string>
@@ -102,7 +121,6 @@
     <string name="app_offline_desc">Works Offline</string>
 
     <!-- Dialog -->
-    <string name="toast_invalid_color">Invalid color</string>
     <string name="hint_hex_color" translatable="false">#RRGGBB</string>
 
     <!-- Group -->
