@@ -25,6 +25,8 @@ object ThemeManager {
             PrefTheme.DRACULA -> Themes.DRACULA
             PrefTheme.MELANGE -> Themes.MELANGE
             PrefTheme.TOKYO_NIGHT -> Themes.TOKYO_NIGHT
+            PrefTheme.MONO_DARK -> Themes.MONO_DARK
+            PrefTheme.MONO_LIGHT -> Themes.MONO_LIGHT
             PrefTheme.CUSTOM -> if (context != null) buildCustomPalette(context) else Themes.TEYIN
             else -> Themes.TEYIN
         }
@@ -126,11 +128,7 @@ object ThemeManager {
         view.setBackgroundColor(mapped)
     }
 
-    private val builtInThemes = listOf(
-        Themes.TEYIN, Themes.MAKO, Themes.RAMA,
-        Themes.CATPPUCCIN_MOCHA, Themes.CATPPUCCIN_LATTE,
-        Themes.DRACULA, Themes.MELANGE, Themes.TOKYO_NIGHT,
-    )
+    private val builtInThemes = Themes.builtIn.values.toList()
 
     private fun createColorMap(context: Context, target: Themes.Palette): Map<Int, Int> {
         val custom = buildCustomPalette(context)

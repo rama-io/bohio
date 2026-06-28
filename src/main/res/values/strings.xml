@@ -55,6 +55,7 @@
     <string name="h3_system">System</string>
 
     <string name="btn_font_custom_pick">Choose Font file</string>
+    <string name="btn_theme_apply_custom">Apply Custom Theme</string>
 
     <!-- ColorPicker -->
     <string name="colorpicker_theme_foreground">Foreground</string>

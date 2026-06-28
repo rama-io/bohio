@@ -11,6 +11,8 @@
     <string name="h3_system">System</string>
     <string name="h3_app">App</string>
 
+    <string name="btn_theme_apply_custom">Benutzerdefiniertes Design anwenden</string>
+
     <!-- ColorPicker -->
     <string name="colorpicker_theme_foreground">Vordergrund</string>
     <string name="colorpicker_theme_collapsible_header">Einklappbare Kopfzeile</string>

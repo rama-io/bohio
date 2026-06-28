@@ -11,6 +11,8 @@
     <string name="h3_system">Sistem</string>
     <string name="h3_app">Uygulama</string>
 
+    <string name="btn_theme_apply_custom">Özel Temayı Uygula</string>
+
     <!-- ColorPicker -->
     <string name="colorpicker_theme_foreground">Ön Plan</string>
     <string name="colorpicker_theme_collapsible_header">Daraltılabilir Başlık</string>
