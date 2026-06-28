@@ -16,6 +16,11 @@ android {
             minifyEnabled false
             consumerProguardFiles 'consumer-rules.pro'
         }
+        create("beta") {
+            matchingFallbacks = ['release']
+        }
+        debug {
+        }
     }
 
     compileOptions {
