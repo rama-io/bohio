@@ -79,6 +79,8 @@ abstract class PrefsManager protected constructor(context: Context) {
             .putBoolean(PrefKeys.SYSTEM_BAR_VISIBLE, true)
             .putBoolean(PrefKeys.SYSTEM_PREVENT_ROTATION, false)
             .putString(PrefKeys.APP_THEME_NAME, defaultTheme)
+
+            // Sections.Global
             .putBoolean(PrefKeys.SETTINGS_SECTION_FONTS, true)
             .putBoolean(PrefKeys.SETTINGS_SECTION_SYSTEM, true)
             .putBoolean(PrefKeys.SETTINGS_SECTION_LANGUAGE, true)

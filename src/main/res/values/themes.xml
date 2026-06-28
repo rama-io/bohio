@@ -87,6 +87,10 @@
         <item name="android:textSize">@dimen/h3</item>
     </style>
 
+    <style name="H3_Center" parent="H3">
+        <item name="android:gravity">center</item>
+    </style>
+
     <style name="Disclaimer" parent="BlockFlow">
         <item name="android:textColor">@color/foreground</item>
         <item name="android:textSize">@dimen/h3</item>
@@ -95,6 +99,10 @@
     <style name="Text" parent="BlockFlow">
         <item name="android:textColor">@color/foreground</item>
         <item name="android:textSize">@dimen/text</item>
+    </style>
+
+    <style name="Text_Center" parent="Text">
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="Small" parent="BlockFlow">
