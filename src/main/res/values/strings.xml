@@ -86,6 +86,8 @@
     <string name="radio_language_english" translatable="false">English</string>
     <string name="radio_language_german" translatable="false">Deutsch</string>
     <string name="radio_language_turkish" translatable="false">Türkçe</string>
+    <string name="radio_theme_mono_dark">Mono Dark</string>
+    <string name="radio_theme_mono_light">Mono Light</string>
 
     <!-- Checkbox -->
     <string name="checkbox_show_system_bar">Show system bar</string>
