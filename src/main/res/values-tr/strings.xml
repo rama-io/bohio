@@ -11,6 +11,20 @@
     <string name="h3_system">Sistem</string>
     <string name="h3_app">Uygulama</string>
 
+    <!-- ColorPicker -->
+    <string name="colorpicker_theme_foreground">Ön Plan</string>
+    <string name="colorpicker_theme_collapsible_header">Daraltılabilir Başlık</string>
+    <string name="colorpicker_theme_h1">H1</string>
+    <string name="colorpicker_theme_icons">İkonlar</string>
+    <string name="colorpicker_theme_accent">Vurgu</string>
+    <string name="colorpicker_theme_background_1">Arka Plan 1</string>
+    <string name="colorpicker_theme_background_2">Arka Plan 2</string>
+    <string name="colorpicker_theme_background_3">Arka Plan 3</string>
+    <string name="colorpicker_theme_input_background">Giriş Arka Planı</string>
+    <string name="colorpicker_theme_button_1_background">Buton 1 Arka Planı</string>
+    <string name="colorpicker_theme_button_2_background">Buton 2 Arka Planı</string>
+    <string name="colorpicker_theme_danger">Tehlike</string>
+
     <!-- Radio -->
     <string name="radio_language_system_default">Sistem Varsayılanı (Desteklemiyorsa İngilizce olur)</string>
 

@@ -11,6 +11,20 @@
     <string name="h3_system">System</string>
     <string name="h3_app">App</string>
 
+    <!-- ColorPicker -->
+    <string name="colorpicker_theme_foreground">Vordergrund</string>
+    <string name="colorpicker_theme_collapsible_header">Einklappbare Kopfzeile</string>
+    <string name="colorpicker_theme_h1">H1</string>
+    <string name="colorpicker_theme_icons">Icons</string>
+    <string name="colorpicker_theme_accent">Akzent</string>
+    <string name="colorpicker_theme_background_1">Hintergrund 1</string>
+    <string name="colorpicker_theme_background_2">Hintergrund 2</string>
+    <string name="colorpicker_theme_background_3">Hintergrund 3</string>
+    <string name="colorpicker_theme_input_background">Eingabehintergrund</string>
+    <string name="colorpicker_theme_button_1_background">Schaltfläche 1 Hintergrund</string>
+    <string name="colorpicker_theme_button_2_background">Schaltfläche 2 Hintergrund</string>
+    <string name="colorpicker_theme_danger">Gefahr</string>
+
     <!-- Radio -->
     <string name="radio_language_system_default">Systemstandard (Fallback auf Englisch)</string>
 
