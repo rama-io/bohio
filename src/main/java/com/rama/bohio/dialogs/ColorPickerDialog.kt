@@ -3,6 +3,8 @@ package com.rama.bohio.dialogs
 import android.app.Activity
 import android.app.Dialog
 import android.graphics.Color
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
@@ -36,18 +38,22 @@ object ColorPickerDialog {
         val closeButton = view.findViewById<Button>(R.id.close_button)
         val hsvSquare = view.findViewById<HSVSquareView>(R.id.hsv_square)
         val hueSlider = view.findViewById<HueStripView>(R.id.hue_slider)
-
-        // HSV state (single source of truth)
+        
         val hsv = floatArrayOf(0f, 0f, 0f)
         Color.colorToHSV(initialColor, hsv)
         var hue = hsv[0]
         var saturation = hsv[1]
         var value = hsv[2]
+        var isUpdatingFromCode = false
 
         fun updateUI() {
             val color = Color.HSVToColor(floatArrayOf(hue, saturation, value))
             preview.background.setTint(color)
+
+            isUpdatingFromCode = true
             hexInput.setText(String.format("#%06X", 0xFFFFFF and color))
+            isUpdatingFromCode = false
+
             hsvSquare.setHue(hue)
         }
         updateUI()
@@ -63,14 +69,28 @@ object ColorPickerDialog {
             updateUI()
         }
 
+        hexInput.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (isUpdatingFromCode) return
+                try {
+                    val color = Color.parseColor(s.toString())
+                    Color.colorToHSV(color, hsv)
+                    hue = hsv[0]
+                    saturation = hsv[1]
+                    value = hsv[2]
+                    updateUI()
+                } catch (_: Exception) {
+                    // Ignore while the input is incomplete/invalid mid-typing or mid-paste.
+                }
+            }
+        })
+
         hexInput.setOnEditorActionListener { _, _, _ ->
             try {
-                val color = Color.parseColor(hexInput.text.toString())
-                Color.colorToHSV(color, hsv)
-                hue = hsv[0]
-                saturation = hsv[1]
-                value = hsv[2]
-                updateUI()
+                Color.parseColor(hexInput.text.toString())
             } catch (_: Exception) {
                 Toast.makeText(
                     activity,
