@@ -192,9 +192,9 @@ object Themes {
     // Mélange Dark
     val MELANGE = Palette(
         foreground = 0xFFECE1D7.toInt(),
-        bg_1 = 0xFF292522.toInt(),
-        bg_2 = 0xFF352F2A.toInt(),
-        bg_3 = 0xFF403A34.toInt(),
+        bg_1 = 0xFF161413.toInt(),
+        bg_2 = 0xFF221c18.toInt(),
+        bg_3 = 0xFF322b24.toInt(),
         bg_4 = 0xFF4D463E.toInt(),
         bg_display = 0xFF161311.toInt(),
         accent_1 = 0xFF78997A.toInt(),
@@ -203,7 +203,7 @@ object Themes {
         accent_4 = 0xFF8CBBA1.toInt(),
         disabled = 0xFF867462.toInt(),
         input = 0xFF211E1B.toInt(),
-        button_1 = 0xFF7F91B2.toInt(),
+        button_1 = 0xFFdab148.toInt(),
         button_2 = 0xFF85B695.toInt(),
         danger = 0xFFB65C60.toInt(),
         collapsible_header = 0xFFEBC06B.toInt(),
