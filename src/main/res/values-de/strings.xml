@@ -44,6 +44,8 @@
     <string name="filepicker_font_custom_none">Keine Schriftart ausgewählt</string>
 
     <!-- Radio -->
+    <string name="radio_default">Standard-Design</string>
+    <string name="radio_none">Nichts</string>
     <string name="radio_default_system">Standard (System)</string>
     <string name="radio_language_system_default">Systemstandard (Fallback auf Englisch)</string>
     <string name="radio_font_custom">Benutzerdefinierte Schriftart</string>

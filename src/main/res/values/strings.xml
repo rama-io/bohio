@@ -94,6 +94,8 @@
     <string name="filepicker_font_custom_none">No font selected</string>
 
     <!-- Radio -->
+    <string name="radio_default">Default</string>
+    <string name="radio_none">None</string>
     <string name="radio_default_system">Default (System)</string>
     <string name="radio_language_system_default">System Default (fallback to English)</string>
     <string name="radio_language_english" translatable="false">English</string>
