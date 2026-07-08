@@ -7,6 +7,7 @@
     <!-- Person/Entity -->
     <string name="app_creator" translatable="false">Pombo</string>
     <string name="contributor_isotjs" translatable="false">isotjs</string>
+    <string name="contributor_joerikaiser" translatable="false">Joeri Kaiser</string>
     <string name="product_jersey_creator" translatable="false">Sarah Cadigan-Fried</string>
     <string name="product_dracula_creator" translatable="false">Zeno Rocha</string>
     <string name="product_catppuccin_creator" translatable="false">Pocco</string>
@@ -31,6 +32,7 @@
     <!-- URL -->
     <string name="app_creator_url" translatable="false">github.com/pomboverso</string>
     <string name="contributor_isotjs_url" translatable="false">github.com/isotjs</string>
+    <string name="contributor_joerikaiser_url" translatable="false">github.com/JoeriKaiser</string>
     <string name="product_mako_url" translatable="false">github.com/rama-io/mako</string>
     <string name="product_txori_url" translatable="false">github.com/rama-io/txori</string>
     <string name="product_tui_url" translatable="false">github.com/rama-io/tui</string>
