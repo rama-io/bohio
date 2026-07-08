@@ -10,7 +10,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.rama.bohio.R
 import com.rama.bohio.managers.PrefsManager
-import com.rama.bohio.objects.PrefKeys
 
 class WdCollapsibleSection @JvmOverloads constructor(
     context: Context,
@@ -38,7 +37,7 @@ class WdCollapsibleSection @JvmOverloads constructor(
         attrs?.let {
             val ta = context.obtainStyledAttributes(it, R.styleable.WdCollapsibleSection)
             labelView.text = ta.getString(R.styleable.WdCollapsibleSection_header) ?: ""
-            key = resolveKey(ta.getString(R.styleable.WdCollapsibleSection_key))
+            key = ta.getString(R.styleable.WdCollapsibleSection_key)
             defaultExpanded = ta.getBoolean(R.styleable.WdCollapsibleSection_defaultExpanded, true)
             ta.recycle()
         }
@@ -64,15 +63,6 @@ class WdCollapsibleSection @JvmOverloads constructor(
                 saveState(next)
                 true
             } else false
-        }
-    }
-
-    private fun resolveKey(raw: String?): String? {
-        if (raw == null) return null
-        return try {
-            PrefKeys::class.java.getDeclaredField(raw).get(null) as? String
-        } catch (_: Exception) {
-            null
         }
     }
 
