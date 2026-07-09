@@ -1,11 +1,10 @@
 plugins {
     id 'com.android.library'
-    id 'kotlin-android'
 }
 
 android {
     namespace 'com.rama.bohio'
-    compileSdk 36
+    compileSdk 37
 
     defaultConfig {
         minSdk 21
@@ -16,20 +15,22 @@ android {
             minifyEnabled false
             consumerProguardFiles 'consumer-rules.pro'
         }
+
         create("beta") {
             matchingFallbacks = ['release']
         }
+
         debug {
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = '1.8'
+    kotlin {
+        jvmToolchain(17)
     }
 }
 
