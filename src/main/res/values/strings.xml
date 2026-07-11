@@ -43,6 +43,7 @@
     <string name="product_catppuccin_url" translatable="false">github.com/catppuccin</string>
     <string name="product_tokyo_url" translatable="false">github.com/enkia/tokyo-night-vscode-theme</string>
     <string name="product_melange_url" translatable="false">github.com/savq/melange-nvim</string>
+    <string name="discord_url" translatable="false">https://discord.gg/zFFupY8PFE</string>
 
     <!-- License -->
     <string name="license_gpl3" translatable="false">GPL 3.0 or Later</string>
