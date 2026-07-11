@@ -58,6 +58,6 @@ object PrefKeys {
     const val SETTINGS_SECTION_LIST = "settings:section:list"
     const val SETTINGS_SECTION_FOLDERS = "settings:section:folders"
 
-    // Sections:Impala
+    // Sections:Okapi
     const val SETTINGS_SECTION_THEMES_LIGHT = "settings:section:themes_light"
 }
