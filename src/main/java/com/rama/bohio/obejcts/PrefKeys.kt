@@ -57,4 +57,7 @@ object PrefKeys {
     // Sections:Tui
     const val SETTINGS_SECTION_LIST = "settings:section:list"
     const val SETTINGS_SECTION_FOLDERS = "settings:section:folders"
+
+    // Sections:Impala
+    const val SETTINGS_SECTION_THEMES_LIGHT = "settings:section:themes_light"
 }

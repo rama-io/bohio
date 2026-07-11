@@ -21,6 +21,7 @@
     <string name="product_teyin" translatable="false">Teyin</string>
     <string name="product_tui" translatable="false">Tui</string>
     <string name="product_txori" translatable="false">Txori</string>
+    <string name="product_impala" translatable="false">Impala</string>
     <string name="product_hackernoon_name" translatable="false">Pixel Icon Library</string>
     <string name="product_jersey_name" translatable="false">Jersey 25</string>
     <string name="product_dracula_name" translatable="false">Dracula</string>
@@ -35,6 +36,7 @@
     <string name="contributor_joerikaiser_url" translatable="false">github.com/JoeriKaiser</string>
     <string name="product_mako_url" translatable="false">github.com/rama-io/mako</string>
     <string name="product_txori_url" translatable="false">github.com/rama-io/txori</string>
+    <string name="product_impala_url" translatable="false">github.com/rama-io/impala</string>
     <string name="product_tui_url" translatable="false">github.com/rama-io/tui</string>
     <string name="product_teyin_url" translatable="false">github.com/rama-io/teyin</string>
     <string name="product_hackernoon_url" translatable="false">github.com/hackernoon/pixel-icon-library</string>
