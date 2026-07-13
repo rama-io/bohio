@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Activities -->
+    <string name="activity_settings_label">Paramètres</string>
+    <string name="activity_about_label">À propos</string>
+
+    <!-- H2 -->
+    <string name="h2_color_picker">Choisir une couleur</string>
+    <!-- H3 -->
+    <string name="h3_contributors">Contributeurs</string>
+    <string name="h3_icons">Icônes</string>
+    <string name="h3_fonts">Polices</string>
+    <string name="h3_themes">Thèmes</string>
+    <string name="h3_app">Application</string>
+    <string name="h3_language">Langue</string>
+    <string name="h3_system">Système</string>
+
+    <!-- Button -->
+    <string name="btn_go_back">Retour</string>
+    <string name="btn_apply">Appliquer</string>
+    <string name="btn_clear">Effacer</string>
+    <string name="btn_reset">Réinitialiser</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_save">Enregistrer</string>
+    <string name="btn_font_custom_pick">Choisir un fichier de police</string>
+    <string name="btn_theme_apply_custom">Appliquer le thème personnalisé</string>
+    <string name="btn_join_discord">Rejoindre Discord</string>
+
+    <!-- ColorPicker -->
+    <string name="colorpicker_theme_foreground">Premier plan</string>
+    <string name="colorpicker_theme_collapsible_header">En-tête rétractable</string>
+    <string name="colorpicker_theme_h1">H1</string>
+    <string name="colorpicker_theme_icons">Icônes</string>
+    <string name="colorpicker_theme_accent">Accent</string>
+    <string name="colorpicker_theme_background_1">Arrière-plan 1</string>
+    <string name="colorpicker_theme_background_2">Arrière-plan 2</string>
+    <string name="colorpicker_theme_background_3">Arrière-plan 3</string>
+    <string name="colorpicker_theme_background_4">Arrière-plan 4</string>
+    <string name="colorpicker_theme_input_background">Arrière-plan de saisie</string>
+    <string name="colorpicker_theme_button_1_background">Arrière-plan du bouton 1</string>
+    <string name="colorpicker_theme_button_2_background">Arrière-plan du bouton 2</string>
+    <string name="colorpicker_theme_danger">Danger</string>
+    <string name="colorpicker_theme_disabled">Désactivé</string>
+    <string name="colorpicker_theme_button_1_background_selected">Arrière-plan du bouton 1 sélectionné</string>
+    <string name="colorpicker_theme_task_frequency">Fréquence des tâches</string>
+    <string name="colorpicker_theme_progressbar">Barre de progression</string>
+    <string name="colorpicker_theme_bg_display">Arrière-plan de l\'affichage</string>
+    <string name="colorpicker_theme_media_background">Arrière-plan du média</string>
+
+    <!-- FilePicker -->
+    <string name="filepicker_font_custom_none">Aucune police sélectionnée</string>
+
+    <!-- Radio -->
+    <string name="radio_default">Par défaut</string>
+    <string name="radio_none">Aucun</string>
+    <string name="radio_default_system">Par défaut (système)</string>
+    <string name="radio_language_system_default">Par défaut du système (retour à l\'anglais)</string>
+    <string name="radio_theme_mono_dark">Mono foncé</string>
+    <string name="radio_theme_mono_light">Mono clair</string>
+    <string name="radio_font_custom">Police personnalisée</string>
+    <string name="radio_theme_rama">Rama</string>
+    <string name="radio_theme_custom">Personnalisé</string>
+
+    <!-- Checkbox -->
+    <string name="checkbox_show_system_bar">Afficher la barre d\'état</string>
+    <string name="checkbox_always_show_search_bar">Toujours visible</string>
+    <string name="checkbox_prevent_home_screen_rotation">Verrouiller la rotation de l\'écran</string>
+
+    <!-- InputLabel -->
+    <string name="label_zoom">Zoom</string>
+
+    <!-- Toasts -->
+    <string name="toast_invalid_color">Couleur invalide</string>
+
+    <!-- APP -->
+    <string name="app_background_tasks_desc">Aucune tâche en arrière-plan</string>
+    <string name="app_ads_desc">Pas de publicités</string>
+    <string name="app_trackers_desc">Pas de traqueurs</string>
+    <string name="app_offline_desc">Fonctionne hors ligne</string>
+</resources>
