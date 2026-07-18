@@ -3,10 +3,6 @@ package com.rama.bohio.util
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
-/**
- * Pure logic, no Android dependency at all, so this runs as a plain JVM
- * test with no Robolectric needed.
- */
 class IdUtilsTest {
 
     @Test

@@ -8,10 +8,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 
-/**
- * LocaleHelper touches Context/Configuration/SharedPreferences, so it needs
- * Robolectric rather than plain JUnit.
- */
 @RunWith(RobolectricTestRunner::class)
 class LocaleHelperTest {
 
