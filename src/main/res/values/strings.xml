@@ -59,7 +59,7 @@
     <string name="license_gpl3" translatable="false">GPL 3.0</string>
     <string name="license_mit" translatable="false">MIT</string>
     <string name="license_ofl_1_1" translatable="false">OFL 1.1</string>
-    <string name="name_version" translatable="false">{0} {1, number}</string>
+    <string name="name_version" translatable="false">%1$s %2$d</string>
     <string name="product_catppuccin_creator" translatable="false">Pocco</string>
     <string name="product_catppuccin_latte_name" translatable="false">Catppuccin Latte</string>
     <string name="product_catppuccin_name" translatable="false">Catppuccin Moccha</string>
