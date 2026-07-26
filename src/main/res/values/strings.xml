@@ -109,5 +109,5 @@
     <string name="radio_language_fi" translatable="false">Suomi</string>
     <string name="radio_language_fil_rPH" translatable="false">Filipino</string>
     <string name="radio_language_pt_rBR" translatable="false">Português (Brasil)</string>
-    <string name="radio_language_zn_rCN" translatable="false">简体中文</string>
+    <string name="radio_language_zh_rCN" translatable="false">简体中文</string>
 </resources>
