@@ -13,7 +13,6 @@
     <string name="btn_go_back">Geri Dön</string>
     <string name="btn_join_discord">Discord\'a Katıl</string>
     <string name="btn_reset">Sıfırla</string>
-    <string name="btn_save"></string>
     <string name="btn_theme_apply_custom">Özel Temayı Uygula</string>
     <string name="checkbox_always_show_search_bar">Her zaman görünür</string>
     <string name="checkbox_prevent_home_screen_rotation">Ekran döndürmeyi kilitle</string>
@@ -23,20 +22,14 @@
     <string name="colorpicker_theme_background_2">Arka Plan 2</string>
     <string name="colorpicker_theme_background_3">Arka Plan 3</string>
     <string name="colorpicker_theme_background_4">Arka Plan 4</string>
-    <string name="colorpicker_theme_bg_display"></string>
     <string name="colorpicker_theme_button_1_background">Buton 1 Arka Planı</string>
-    <string name="colorpicker_theme_button_1_background_selected"></string>
     <string name="colorpicker_theme_button_2_background">Buton 2 Arka Planı</string>
     <string name="colorpicker_theme_collapsible_header">Daraltılabilir Başlık</string>
     <string name="colorpicker_theme_danger">Tehlike</string>
-    <string name="colorpicker_theme_disabled"></string>
     <string name="colorpicker_theme_foreground">Ön Plan</string>
     <string name="colorpicker_theme_h1">H1</string>
     <string name="colorpicker_theme_icons">İkonlar</string>
     <string name="colorpicker_theme_input_background">Giriş Arka Planı</string>
-    <string name="colorpicker_theme_media_background"></string>
-    <string name="colorpicker_theme_progressbar"></string>
-    <string name="colorpicker_theme_task_frequency"></string>
     <string name="filepicker_font_custom_none">Yazı tipi seçilmedi</string>
     <string name="h2_color_picker">Renk Seç</string>
     <string name="h3_app">Uygulama</string>
@@ -53,7 +46,5 @@
     <string name="radio_language_system_default">Sistem Varsayılanı (Desteklemiyorsa İngilizce olur)</string>
     <string name="radio_none">Yok</string>
     <string name="radio_theme_custom">Özel</string>
-    <string name="radio_theme_mono_dark"></string>
-    <string name="radio_theme_mono_light"></string>
     <string name="toast_invalid_color">Geçersiz renk</string>
 </resources>
