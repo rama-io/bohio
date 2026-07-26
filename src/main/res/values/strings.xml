@@ -94,10 +94,14 @@
     <string name="radio_default_system">Default (System)</string>
     <string name="radio_font_custom">Custom font</string>
     <string name="radio_language_english" translatable="false">English</string>
+    <string name="radio_language_fi" translatable="false">Suomi</string>
+    <string name="radio_language_fil_rPH" translatable="false">Filipino</string>
     <string name="radio_language_french" translatable="false">Français</string>
     <string name="radio_language_german" translatable="false">Deutsch</string>
+    <string name="radio_language_pt_rBR" translatable="false">Português (Brasil)</string>
     <string name="radio_language_system_default">System Default (fallback to English)</string>
     <string name="radio_language_turkish" translatable="false">Türkçe</string>
+    <string name="radio_language_zh_rCN" translatable="false">简体中文</string>
     <string name="radio_none">None</string>
     <string name="radio_theme_custom">Custom</string>
     <string name="radio_theme_mono_dark">Mono Dark</string>
@@ -106,8 +110,4 @@
     <string name="settings_section_collapse_indicator" translatable="false">[-]</string>
     <string name="settings_section_expand_indicator" translatable="false">[+]</string>
     <string name="toast_invalid_color">Invalid color</string>
-    <string name="radio_language_fi" translatable="false">Suomi</string>
-    <string name="radio_language_fil_rPH" translatable="false">Filipino</string>
-    <string name="radio_language_pt_rBR" translatable="false">Português (Brasil)</string>
-    <string name="radio_language_zh_rCN" translatable="false">简体中文</string>
 </resources>
