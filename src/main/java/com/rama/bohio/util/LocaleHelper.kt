@@ -13,7 +13,11 @@ object LocaleHelper {
 
         if (langCode == PrefLanguage.SYSTEM || langCode.isBlank()) return context
 
-        val locale = Locale(langCode)
+        // supported_language_codes stores Android resource-qualifier style tags
+        // (e.g. "pt-rBR", "fil-rPH") to mirror the res/values-xx-rYY folder names.
+        // Locale APIs expect real BCP-47 tags ("pt-BR"), so strip the "r".
+        val normalizedTag = langCode.replace(Regex("-r([A-Za-z]{2})$"), "-$1")
+        val locale = Locale.forLanguageTag(normalizedTag)
         Locale.setDefault(locale)
 
         val config = Configuration(context.resources.configuration)
