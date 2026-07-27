@@ -40,24 +40,4 @@ object PrefKeys {
     const val SETTINGS_SECTION_SYSTEM = "settings:section:system"
     const val SETTINGS_SECTION_LANGUAGE = "settings:section:language"
     const val SETTINGS_SECTION_THEMES = "settings:section:themes"
-
-    // Sections:Mako
-    const val SETTINGS_SECTION_CLOCK = "settings:section:clock"
-    const val SETTINGS_SECTION_BACKGROUND = "settings:section:background"
-    const val SETTINGS_SECTION_BATTERY = "settings:section:battery"
-    const val SETTINGS_SECTION_TEMPERATURE = "settings:section:temperature"
-    const val SETTINGS_SECTION_DATE = "settings:section:date"
-    const val SETTINGS_SECTION_ICONS = "settings:section:icons"
-    const val SETTINGS_SECTION_GROUPS = "settings:section:groups"
-    const val SETTINGS_SECTION_SEARCH = "settings:section:search"
-    const val SETTINGS_SECTION_DATA = "settings:section:data"
-    const val SETTINGS_SECTION_APPS = "settings:section:apps"
-    const val SETTINGS_SECTION_SECURITY = "settings:section:security"
-
-    // Sections:Tui
-    const val SETTINGS_SECTION_LIST = "settings:section:list"
-    const val SETTINGS_SECTION_FOLDERS = "settings:section:folders"
-
-    // Sections:Okapi
-    const val SETTINGS_SECTION_THEMES_LIGHT = "settings:section:themes_light"
 }
