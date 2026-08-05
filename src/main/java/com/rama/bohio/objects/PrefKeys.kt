@@ -40,4 +40,6 @@ object PrefKeys {
     const val SETTINGS_SECTION_SYSTEM = "settings:section:system"
     const val SETTINGS_SECTION_LANGUAGE = "settings:section:language"
     const val SETTINGS_SECTION_THEMES = "settings:section:themes"
+    const val SETTINGS_SECTION_LIST = "settings:section:list"
+    const val SETTINGS_SECTION_FOLDERS = "settings:section:folders"
 }
