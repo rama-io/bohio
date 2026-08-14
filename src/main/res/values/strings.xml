@@ -80,6 +80,8 @@
     <string name="product_melange_url" translatable="false">github.com/savq/melange-nvim</string>
     <string name="product_okapi" translatable="false">Okapi</string>
     <string name="product_okapi_url" translatable="false">github.com/rama-io/okapi</string>
+    <string name="product_jaguar" translatable="false">Jaguar</string>
+    <string name="product_jaguar_url" translatable="false">github.com/rama-io/jaguar</string>
     <string name="product_rama" translatable="false">Rama</string>
     <string name="product_teyin" translatable="false">Teyin</string>
     <string name="product_teyin_url" translatable="false">github.com/rama-io/teyin</string>
