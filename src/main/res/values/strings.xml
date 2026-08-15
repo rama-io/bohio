@@ -70,6 +70,8 @@
     <string name="product_hackernoon_creator" translatable="false">HackerNoon</string>
     <string name="product_hackernoon_name" translatable="false">Pixel Icon Library</string>
     <string name="product_hackernoon_url" translatable="false">github.com/hackernoon/pixel-icon-library</string>
+    <string name="product_jaguar" translatable="false">Jaguar</string>
+    <string name="product_jaguar_url" translatable="false">github.com/rama-io/jaguar</string>
     <string name="product_jersey_creator" translatable="false">Sarah Cadigan-Fried</string>
     <string name="product_jersey_name" translatable="false">Jersey 25</string>
     <string name="product_jersey_url" translatable="false">github.com/scfried/soft-type-jersey</string>
@@ -80,8 +82,6 @@
     <string name="product_melange_url" translatable="false">github.com/savq/melange-nvim</string>
     <string name="product_okapi" translatable="false">Okapi</string>
     <string name="product_okapi_url" translatable="false">github.com/rama-io/okapi</string>
-    <string name="product_jaguar" translatable="false">Jaguar</string>
-    <string name="product_jaguar_url" translatable="false">github.com/rama-io/jaguar</string>
     <string name="product_rama" translatable="false">Rama</string>
     <string name="product_teyin" translatable="false">Teyin</string>
     <string name="product_teyin_url" translatable="false">github.com/rama-io/teyin</string>
