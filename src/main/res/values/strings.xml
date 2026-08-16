@@ -49,6 +49,7 @@
     <string name="filepicker_font_custom_none">No font selected</string>
     <string name="h2_color_picker">Pick a Color</string>
     <string name="h3_app">App</string>
+    <string name="h3_apps_by_rama">Apps by Rama</string>
     <string name="h3_contributors">Contributors</string>
     <string name="h3_fonts">Fonts</string>
     <string name="h3_icons">Icons</string>
