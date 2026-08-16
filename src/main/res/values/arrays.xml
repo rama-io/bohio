@@ -11,7 +11,7 @@
         <item>1.4</item>
         <item>1.5</item>
     </string-array>
-    
+
     <string-array name="app_contributor_names">
         <item>@string/contributor_pombo</item>
         <item>@string/contributor_isotjs</item>
