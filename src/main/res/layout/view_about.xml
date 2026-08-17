@@ -52,15 +52,6 @@
                 style="@style/VerticalListDivided" />
 
             <TextView
-                android:text="@string/h3_apps_by_rama"
-                style="@style/H3" />
-
-            <LinearLayout
-                android:id="@+id/catalogue"
-                android:gravity="center_horizontal"
-                style="@style/VerticalListDivided" />
-
-            <TextView
                 android:text="@string/h3_links"
                 style="@style/H3" />
 
@@ -81,6 +72,15 @@
                     app:url="@string/discord_url"
                     app:text="@string/btn_join_discord" />
             </LinearLayout>
+
+            <TextView
+                android:text="@string/h3_apps_by_rama"
+                style="@style/H3" />
+
+            <LinearLayout
+                android:id="@+id/catalogue"
+                android:gravity="center_horizontal"
+                style="@style/VerticalListDivided" />
 
         </LinearLayout>
     </ScrollView>

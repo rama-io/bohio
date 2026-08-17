@@ -80,7 +80,13 @@ class WdLabelLink @JvmOverloads constructor(
                 }
 
                 "url" -> {
-                    url = attrs.getAttributeValue(i)
+                    val resId = attrs.getAttributeResourceValue(i, 0)
+
+                    url = if (resId != 0) {
+                        context.getString(resId)
+                    } else {
+                        attrs.getAttributeValue(i)
+                    }
                 }
 
                 "icon" -> {
