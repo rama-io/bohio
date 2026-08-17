@@ -20,6 +20,8 @@ class WdLabelLink @JvmOverloads constructor(
     private val iconImage: ImageView
     private val iconText: TextView
 
+    private var url: String? = null
+
     init {
         LayoutInflater.from(context).inflate(R.layout.wd_label_link, this, true)
 
@@ -35,24 +37,26 @@ class WdLabelLink @JvmOverloads constructor(
     }
 
     private fun openUrl() {
-        val text = iconText.text.toString().trim()
+        // Use url if defined, otherwise use the displayed text
+        val destination = url?.trim().takeUnless { it.isNullOrEmpty() }
+            ?: iconText.text.toString().trim()
 
-        if (text.isEmpty()) return
+        if (destination.isEmpty()) return
 
-        val url = when {
-            text.startsWith("http://", ignoreCase = true) ||
-                    text.startsWith("https://", ignoreCase = true) -> {
-                text
+        val finalUrl = when {
+            destination.startsWith("http://", ignoreCase = true) ||
+                    destination.startsWith("https://", ignoreCase = true) -> {
+                destination
             }
 
             else -> {
-                "https://$text"
+                "https://$destination"
             }
         }
 
         val intent = Intent(
             Intent.ACTION_VIEW,
-            Uri.parse(url)
+            Uri.parse(finalUrl)
         ).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
@@ -75,6 +79,16 @@ class WdLabelLink @JvmOverloads constructor(
                     }
                 }
 
+                "url" -> {
+                    val resId = attrs.getAttributeResourceValue(i, 0)
+
+                    url = if (resId != 0) {
+                        context.getString(resId)
+                    } else {
+                        attrs.getAttributeValue(i)
+                    }
+                }
+
                 "icon" -> {
                     val resId = attrs.getAttributeResourceValue(i, 0)
 
@@ -88,6 +102,10 @@ class WdLabelLink @JvmOverloads constructor(
 
     fun setText(text: String) {
         iconText.text = text
+    }
+
+    fun setUrl(url: String?) {
+        this.url = url
     }
 
     fun setIcon(resId: Int) {

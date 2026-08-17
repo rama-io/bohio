@@ -116,4 +116,6 @@
     <string name="settings_section_collapse_indicator" translatable="false">[-]</string>
     <string name="settings_section_expand_indicator" translatable="false">[+]</string>
     <string name="toast_invalid_color">Invalid color</string>
+    <string name="h3_links">Community Links</string>
+    <string name="rama_url" translatable="false">rama-io.github.io</string>
 </resources>
