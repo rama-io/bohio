@@ -3,6 +3,7 @@
     <attr name="bgColor" format="color" />
     <attr name="foregroundColor" format="color" />
     <attr name="text" format="string" />
+    <attr name="url" format="string" />
     <attr name="icon" format="reference" />
 
     <declare-styleable name="WdCollapsibleSection">
