@@ -40,10 +40,12 @@
     <string name="filepicker_font_custom_none">Fonttia ei ole valittu</string>
     <string name="h2_color_picker">Valitse väri</string>
     <string name="h3_app">Sovellus</string>
+    <string name="h3_apps_by_rama">Raman sovellukset</string>
     <string name="h3_contributors">Osallistujat</string>
     <string name="h3_fonts">Fontit</string>
     <string name="h3_icons">Kuvakkeet</string>
     <string name="h3_language">Kielet</string>
+    <string name="h3_links">Yhteisölinkit</string>
     <string name="h3_system">Järjestelmä</string>
     <string name="h3_themes">Teemat</string>
     <string name="label_zoom">Koko</string>

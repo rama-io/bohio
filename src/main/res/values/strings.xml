@@ -54,6 +54,7 @@
     <string name="h3_fonts">Fonts</string>
     <string name="h3_icons">Icons</string>
     <string name="h3_language">Language</string>
+    <string name="h3_links">Community Links</string>
     <string name="h3_system">System</string>
     <string name="h3_themes">Themes</string>
     <string name="hint_hex_color" translatable="false">#RRGGBB</string>
@@ -113,9 +114,8 @@
     <string name="radio_theme_mono_dark">Mono Dark</string>
     <string name="radio_theme_mono_light">Mono Light</string>
     <string name="radio_theme_rama" translatable="false">Rama</string>
+    <string name="rama_url" translatable="false">rama-io.github.io</string>
     <string name="settings_section_collapse_indicator" translatable="false">[-]</string>
     <string name="settings_section_expand_indicator" translatable="false">[+]</string>
     <string name="toast_invalid_color">Invalid color</string>
-    <string name="h3_links">Community Links</string>
-    <string name="rama_url" translatable="false">rama-io.github.io</string>
 </resources>
