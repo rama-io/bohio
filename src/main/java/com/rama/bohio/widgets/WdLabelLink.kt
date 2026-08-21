@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.rama.bohio.R
+import com.rama.bohio.util.UrlNormalizer
 
 class WdLabelLink @JvmOverloads constructor(
     context: Context,
@@ -37,22 +38,12 @@ class WdLabelLink @JvmOverloads constructor(
     }
 
     private fun openUrl() {
-        // Use url if defined, otherwise use the displayed text
         val destination = url?.trim().takeUnless { it.isNullOrEmpty() }
             ?: iconText.text.toString().trim()
 
         if (destination.isEmpty()) return
 
-        val finalUrl = when {
-            destination.startsWith("http://", ignoreCase = true) ||
-                    destination.startsWith("https://", ignoreCase = true) -> {
-                destination
-            }
-
-            else -> {
-                "https://$destination"
-            }
-        }
+        val finalUrl = UrlNormalizer.normalize(destination)
 
         val intent = Intent(
             Intent.ACTION_VIEW,

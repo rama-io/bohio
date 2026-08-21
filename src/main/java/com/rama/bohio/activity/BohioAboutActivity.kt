@@ -13,6 +13,7 @@ import androidx.annotation.ArrayRes
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.rama.bohio.R
+import com.rama.bohio.util.UrlNormalizer
 import com.rama.bohio.widgets.WdLabel
 import com.rama.bohio.widgets.WdLabelLink
 
@@ -107,16 +108,7 @@ abstract class BohioAboutActivity : BohioActivity() {
 
             if (destination.isEmpty()) return@setOnClickListener
 
-            val finalUrl = when {
-                destination.startsWith("http://", ignoreCase = true) ||
-                        destination.startsWith("https://", ignoreCase = true) -> {
-                    destination
-                }
-
-                else -> {
-                    "https://$destination"
-                }
-            }
+            val finalUrl = UrlNormalizer.normalize(destination)
 
             val intent = Intent(
                 Intent.ACTION_VIEW,
