@@ -11,14 +11,13 @@
             android:id="@+id/icon_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="12sp"
             android:background="@color/bg_2">
 
             <ImageView
                 android:id="@+id/icon_image"
                 android:contentDescription="@null"
-                android:layout_width="24sp"
-                android:layout_height="24sp"
+                android:layout_width="48sp"
+                android:layout_height="48sp"
                 android:layout_gravity="center" />
         </FrameLayout>
 

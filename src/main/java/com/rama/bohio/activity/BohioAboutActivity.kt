@@ -101,6 +101,39 @@ abstract class BohioAboutActivity : BohioActivity() {
         }
         catalogueIconData.recycle()
 
+        val ramaBtn = findViewById<Button>(R.id.rama_btn)
+        ramaBtn.setOnClickListener {
+            val destination = getString(R.string.rama_url).trim()
+
+            if (destination.isEmpty()) return@setOnClickListener
+
+            val finalUrl = when {
+                destination.startsWith("http://", ignoreCase = true) ||
+                        destination.startsWith("https://", ignoreCase = true) -> {
+                    destination
+                }
+
+                else -> {
+                    "https://$destination"
+                }
+            }
+
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(finalUrl)
+            )
+            startActivity(intent)
+        }
+
+        val discordButton = findViewById<View>(R.id.discord_btn)
+        discordButton.setOnClickListener {
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(getString(R.string.discord_url))
+            )
+            startActivity(intent)
+        }
+
         val version = packageManager.getPackageInfo(packageName, 0).versionCode
         val nameView = findViewById<TextView>(R.id.name_version)
         nameView.text = getString(R.string.name_version, getString(appNameRes), version)

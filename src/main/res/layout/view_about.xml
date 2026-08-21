@@ -52,28 +52,6 @@
                 style="@style/VerticalListDivided" />
 
             <TextView
-                android:text="@string/h3_links"
-                style="@style/H3" />
-
-            <LinearLayout
-                android:gravity="center_horizontal"
-                style="@style/VerticalListDivided">
-
-                <com.rama.bohio.widgets.WdLabelLink
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:icon="@drawable/px_seedlings"
-                    app:text="@string/rama_url" />
-
-                <com.rama.bohio.widgets.WdLabelLink
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:icon="@drawable/px_seedlings"
-                    app:url="@string/discord_url"
-                    app:text="@string/btn_join_discord" />
-            </LinearLayout>
-
-            <TextView
                 android:text="@string/h3_apps_by_rama"
                 style="@style/H3" />
 
@@ -81,6 +59,25 @@
                 android:id="@+id/catalogue"
                 android:gravity="center_horizontal"
                 style="@style/VerticalListDivided" />
+
+            <TextView
+                android:text="@string/h3_links"
+                style="@style/H3" />
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                style="@style/VerticalListDivided">
+
+                <Button
+                    android:id="@+id/rama_btn"
+                    android:text="@string/rama_url"
+                    style="@style/BTN2" />
+
+                <Button
+                    android:id="@+id/discord_btn"
+                    android:text="@string/btn_join_discord"
+                    style="@style/BTN2" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
