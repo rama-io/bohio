@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="activity_about_label">About</string>
-    <string name="activity_settings_label">Settings</string>
-    <string name="app_ads_desc">No Ads</string>
-    <string name="app_background_tasks_desc">No Background Tasks</string>
+    <string name="activity_about_label">حول</string>
+    <string name="activity_settings_label">الإعدادات</string>
+    <string name="app_ads_desc">بدون إعلانات</string>
+    <string name="app_background_tasks_desc">بدون مهام في الخلفية</string>
     <string name="app_creator" translatable="false">@string/contributor_pombo</string>
     <string name="app_creator_url" translatable="false">@string/contributor_pombo_url</string>
-    <string name="app_offline_desc">Works Offline</string>
-    <string name="app_trackers_desc">No Trackers</string>
-    <string name="btn_apply">Apply</string>
-    <string name="btn_cancel">Cancel</string>
-    <string name="btn_clear">Clear</string>
-    <string name="btn_font_custom_pick">Choose Font file</string>
-    <string name="btn_go_back">Go Back</string>
-    <string name="btn_join_discord">Join Discord</string>
-    <string name="btn_reset">Reset</string>
-    <string name="btn_save">Save</string>
-    <string name="btn_theme_apply_custom">Apply Custom Theme</string>
-    <string name="checkbox_always_show_search_bar">Always visible</string>
-    <string name="checkbox_prevent_home_screen_rotation">Lock screen rotation</string>
-    <string name="checkbox_show_system_bar">Show system bar</string>
-    <string name="colorpicker_theme_accent">Accent</string>
-    <string name="colorpicker_theme_background_1">Background 1</string>
-    <string name="colorpicker_theme_background_2">Background 2</string>
-    <string name="colorpicker_theme_background_3">Background 3</string>
-    <string name="colorpicker_theme_background_4">Background 4</string>
-    <string name="colorpicker_theme_bg_display">Display Background</string>
-    <string name="colorpicker_theme_button_1_background">Button 1 Background</string>
-    <string name="colorpicker_theme_button_1_background_selected">Button 1 Selected Background</string>
-    <string name="colorpicker_theme_button_2_background">Button 2 Background</string>
-    <string name="colorpicker_theme_collapsible_header">Collapsible Header</string>
-    <string name="colorpicker_theme_danger">Danger</string>
-    <string name="colorpicker_theme_disabled">Disabled</string>
-    <string name="colorpicker_theme_foreground">Foreground</string>
+    <string name="app_offline_desc">يعمل دون اتصال</string>
+    <string name="app_trackers_desc">بدون متتبعات</string>
+    <string name="btn_apply">تطبيق</string>
+    <string name="btn_cancel">إلغاء</string>
+    <string name="btn_clear">مسح</string>
+    <string name="btn_font_custom_pick">اختيار ملف خط</string>
+    <string name="btn_go_back">رجوع</string>
+    <string name="btn_join_discord">انضم إلى Discord</string>
+    <string name="btn_reset">إعادة ضبط</string>
+    <string name="btn_save">حفظ</string>
+    <string name="btn_theme_apply_custom">تطبيق سمة مخصصة</string>
+    <string name="checkbox_always_show_search_bar">مرئي دائمًا</string>
+    <string name="checkbox_prevent_home_screen_rotation">قفل دوران الشاشة</string>
+    <string name="checkbox_show_system_bar">إظهار شريط النظام</string>
+    <string name="colorpicker_theme_accent">اللون المميز</string>
+    <string name="colorpicker_theme_background_1">الخلفية 1</string>
+    <string name="colorpicker_theme_background_2">الخلفية 2</string>
+    <string name="colorpicker_theme_background_3">الخلفية 3</string>
+    <string name="colorpicker_theme_background_4">الخلفية 4</string>
+    <string name="colorpicker_theme_bg_display">خلفية الشاشة</string>
+    <string name="colorpicker_theme_button_1_background">خلفية الزر 1</string>
+    <string name="colorpicker_theme_button_1_background_selected">خلفية الزر 1 عند التحديد</string>
+    <string name="colorpicker_theme_button_2_background">خلفية الزر 2</string>
+    <string name="colorpicker_theme_collapsible_header">عنوان قابل للطي</string>
+    <string name="colorpicker_theme_danger">تحذير</string>
+    <string name="colorpicker_theme_disabled">معطّل</string>
+    <string name="colorpicker_theme_foreground">المقدمة</string>
     <string name="colorpicker_theme_h1">H1</string>
-    <string name="colorpicker_theme_icons">Icons</string>
-    <string name="colorpicker_theme_input_background">Input Background</string>
-    <string name="colorpicker_theme_media_background">Media Background</string>
-    <string name="colorpicker_theme_progressbar">Progress Bar</string>
-    <string name="colorpicker_theme_task_frequency">Task Frequency</string>
+    <string name="colorpicker_theme_icons">الأيقونات</string>
+    <string name="colorpicker_theme_input_background">خلفية حقل الإدخال</string>
+    <string name="colorpicker_theme_media_background">خلفية الوسائط</string>
+    <string name="colorpicker_theme_progressbar">شريط التقدم</string>
+    <string name="colorpicker_theme_task_frequency">تكرار المهام</string>
     <string name="contributor_isotjs" translatable="false">isotjs</string>
     <string name="contributor_isotjs_url" translatable="false">github.com/isotjs</string>
     <string name="contributor_joerikaiser" translatable="false">Joeri Kaiser</string>
@@ -46,19 +46,19 @@
     <string name="contributor_pombo" translatable="false">Pombo</string>
     <string name="contributor_pombo_url" translatable="false">github.com/pomboverso</string>
     <string name="discord_url" translatable="false">https://discord.gg/zFFupY8PFE</string>
-    <string name="filepicker_font_custom_none">No font selected</string>
-    <string name="h2_color_picker">Pick a Color</string>
-    <string name="h3_app">App</string>
-    <string name="h3_apps_by_rama">Apps by Rama</string>
-    <string name="h3_contributors">Maintainers</string>
-    <string name="h3_fonts">Fonts</string>
-    <string name="h3_icons">Icons</string>
-    <string name="h3_language">Language</string>
-    <string name="h3_links">Community Links</string>
-    <string name="h3_system">System</string>
-    <string name="h3_themes">Themes</string>
+    <string name="filepicker_font_custom_none">لم يتم اختيار أي خط</string>
+    <string name="h2_color_picker">اختر لونًا</string>
+    <string name="h3_app">التطبيق</string>
+    <string name="h3_apps_by_rama">تطبيقات من Rama</string>
+    <string name="h3_contributors">المشرفون</string>
+    <string name="h3_fonts">الخطوط</string>
+    <string name="h3_icons">الأيقونات</string>
+    <string name="h3_language">اللغة</string>
+    <string name="h3_links">روابط المجتمع</string>
+    <string name="h3_system">النظام</string>
+    <string name="h3_themes">السمات</string>
     <string name="hint_hex_color" translatable="false">#RRGGBB</string>
-    <string name="label_zoom">Zoom</string>
+    <string name="label_zoom">التكبير</string>
     <string name="license_cc_4" translatable="false">CC 4.0</string>
     <string name="license_gpl3" translatable="false">GPL 3.0</string>
     <string name="license_mit" translatable="false">MIT</string>
@@ -96,9 +96,9 @@
     <string name="product_tui_url" translatable="false">github.com/rama-io/tui</string>
     <string name="product_txori" translatable="false">Txori</string>
     <string name="product_txori_url" translatable="false">github.com/rama-io/txori</string>
-    <string name="radio_default">Default</string>
-    <string name="radio_default_system">Default (System)</string>
-    <string name="radio_font_custom">Custom font</string>
+    <string name="radio_default">افتراضي</string>
+    <string name="radio_default_system">افتراضي (النظام)</string>
+    <string name="radio_font_custom">خط مخصص</string>
     <string name="radio_language_english" translatable="false">English</string>
     <string name="radio_language_fi" translatable="false">Suomi</string>
     <string name="radio_language_fil_rPH" translatable="false">Filipino</string>
@@ -106,18 +106,18 @@
     <string name="radio_language_german" translatable="false">Deutsch</string>
     <string name="radio_language_jp" translatable="false">日本語</string>
     <string name="radio_language_pt_rBR" translatable="false">Português (Brasil)</string>
-    <string name="radio_language_system_default">System Default (fallback to English)</string>
+    <string name="radio_language_system_default">لغة النظام الافتراضية (ستُستخدم الإنجليزية كبديل)</string>
     <string name="radio_language_turkish" translatable="false">Türkçe</string>
     <string name="radio_language_zh_rCN" translatable="false">简体中文</string>
     <string name="radio_language_spanish" translatable="false">Español</string>
-    <string name="radio_language_arabic">العربية</string>
-    <string name="radio_none">None</string>
-    <string name="radio_theme_custom">Custom</string>
-    <string name="radio_theme_mono_dark">Mono Dark</string>
-    <string name="radio_theme_mono_light">Mono Light</string>
+    <string name="radio_language_arabic" translatable="false">العربية</string>
+    <string name="radio_none">بلا</string>
+    <string name="radio_theme_custom">مخصص</string>
+    <string name="radio_theme_mono_dark">أحادي داكن</string>
+    <string name="radio_theme_mono_light">أحادي فاتح</string>
     <string name="radio_theme_rama" translatable="false">Rama</string>
     <string name="rama_url" translatable="false">rama-io.github.io</string>
     <string name="settings_section_collapse_indicator" translatable="false">[-]</string>
     <string name="settings_section_expand_indicator" translatable="false">[+]</string>
-    <string name="toast_invalid_color">Invalid color</string>
+    <string name="toast_invalid_color">لون غير صالح</string>
 </resources>
