@@ -19,6 +19,7 @@
     <string name="btn_theme_apply_custom">Apply Custom Theme</string>
     <string name="checkbox_always_show_search_bar">Always visible</string>
     <string name="checkbox_prevent_home_screen_rotation">Lock screen rotation</string>
+    <string name="checkbox_nav_bar_transparent">Transparent navigation bar</string>
     <string name="checkbox_show_system_bar">Show system bar</string>
     <string name="colorpicker_theme_accent">Accent</string>
     <string name="colorpicker_theme_background_1">Background 1</string>

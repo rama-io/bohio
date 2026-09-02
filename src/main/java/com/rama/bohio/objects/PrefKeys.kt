@@ -7,6 +7,7 @@ object PrefKeys {
     const val SYSTEM_BAR_VISIBLE = "system:bar:visible"
     const val SYSTEM_PREVENT_ROTATION = "system:prevent_rotation"
     const val SYSTEM_PREVENT_SLEEP = "system:prevent_sleeping"
+    const val SYSTEM_NAV_BAR_TRANSPARENT = "system:nav_bar_transparent"
     const val APP_UI_SCALE = "app:ui_scale"
 
     // Themes
