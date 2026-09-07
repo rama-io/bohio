@@ -99,6 +99,9 @@ abstract class BohioActivity : ComponentActivity() {
         val preventRotation = p.getBoolean(PrefKeys.SYSTEM_PREVENT_ROTATION, false)
         applyRotationLock(preventRotation)
 
+        val transparentNavBar = p.getBoolean(PrefKeys.SYSTEM_NAV_BAR_TRANSPARENT, false)
+applyNavBarContrastEnforced(!transparentNavBar)
+
         ThemeManager.applyTheme(this, contentRoot())
     }
 
@@ -125,6 +128,12 @@ abstract class BohioActivity : ComponentActivity() {
             if (lock) ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
             else ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
     }
+
+    fun applyNavBarContrastEnforced(enforced: Boolean) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        window.isNavigationBarContrastEnforced = enforced
+    }
+}
 
     protected fun applyEdgeToEdgePadding(root: View) {
         val paddingInline = dpToPx(this, 16f)
