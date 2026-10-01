@@ -22,7 +22,7 @@
 
     <style name="HorizontalList_BG2" parent="HorizontalList">
         <item name="android:background">@color/bg_2</item>
-        <item name="android:padding">16sp</item>
+        <item name="android:padding">16dp</item>
     </style>
 
     <style name="HorizontalListDivided" parent="HorizontalList">
@@ -46,7 +46,7 @@
 
     <style name="VerticalList_BG2" parent="VerticalList">
         <item name="android:background">@color/bg_2</item>
-        <item name="android:padding">16sp</item>
+        <item name="android:padding">16dp</item>
     </style>
 
     <style name="VerticalListDivided" parent="VerticalList">
@@ -111,7 +111,7 @@
     </style>
 
     <style name="BTN" parent="BlockFlow">
-        <item name="android:padding">16sp</item>
+        <item name="android:padding">16dp</item>
         <item name="android:textColor">@color/bg_1</item>
         <item name="android:textSize">@dimen/text</item>
         <item name="android:textAllCaps">true</item>
@@ -135,10 +135,10 @@
     </style>
 
     <style name="BTN_range" parent="BlockFlow">
-        <item name="android:paddingTop">10sp</item>
-        <item name="android:paddingBottom">10sp</item>
-        <item name="android:paddingStart">2sp</item>
-        <item name="android:paddingEnd">2sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">2dp</item>
+        <item name="android:paddingEnd">2dp</item>
         <item name="android:textSize">@dimen/small</item>
         <item name="android:background">@color/button_2</item>
         <item name="android:textColor">@color/bg_1</item>
@@ -159,43 +159,43 @@
         <item name="android:textColor">@color/foreground</item>
         <item name="android:textSize">@dimen/text</item>
         <item name="android:background">@color/input</item>
-        <item name="android:paddingTop">16sp</item>
-        <item name="android:paddingBottom">16sp</item>
-        <item name="android:paddingStart">8sp</item>
-        <item name="android:paddingEnd">8sp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
         <item name="android:maxLines">1</item>
         <item name="android:singleLine">true</item>
     </style>
 
     <style name="Icon18">
-        <item name="android:layout_width">18sp</item>
-        <item name="android:layout_height">18sp</item>
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="Icon24">
-        <item name="android:layout_width">24sp</item>
-        <item name="android:layout_height">24sp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:tint">@color/icon</item>
     </style>
 
     <style name="Icon32">
-        <item name="android:layout_width">32sp</item>
-        <item name="android:layout_height">32sp</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="ColorPickerBtn" parent="BlockFlow">
-        <item name="android:layout_marginBottom">8sp</item>
+        <item name="android:layout_marginBottom">8dp</item>
     </style>
 
     <style name="Separator">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:background">@color/disabled</item>
-        <item name="android:layout_marginTop">16sp</item>
-        <item name="android:layout_marginBottom">16sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
     <style name="SeparatorListHorizontal">

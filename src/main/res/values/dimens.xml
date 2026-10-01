@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="space_between_elements">8sp</dimen>
+    <dimen name="space_between_elements">8dp</dimen>
     <dimen name="space_between_elements_small">2dp</dimen>
     <dimen name="h1">72sp</dimen>
     <dimen name="h2">32sp</dimen>
