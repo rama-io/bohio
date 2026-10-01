@@ -198,4 +198,9 @@
         <item name="android:layout_marginBottom">16sp</item>
     </style>
 
+    <style name="SeparatorListHorizontal">
+        <item name="android:layout_width">@dimen/space_between_elements</item>
+        <item name="android:layout_height">@dimen/space_between_elements</item>
+    </style>
+
 </resources>

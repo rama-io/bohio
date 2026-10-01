@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/HorizontalList_BG2">
+    android:paddingTop="@dimen/space_between_elements"
+    android:paddingBottom="@dimen/space_between_elements"
+    style="@style/HorizontalList">
 
     <FrameLayout
-        android:id="@+id/box"
+        android:id="@+id/radio"
         android:layout_width="18sp"
         android:layout_height="18sp"
-        android:background="@drawable/px_box_outline"
-        android:tag="accent"
-        android:padding="1sp">
+        android:background="@drawable/px_circle_outline"
+        android:padding="5sp"
+        android:tag="accent">
 
         <ImageView
             android:id="@+id/check"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:importantForAccessibility="no"
-            android:src="@drawable/px_check"
-            android:visibility="gone"
-            android:tag="accent" />
+            android:src="@drawable/px_circle"
+            android:tag="accent"
+            android:visibility="gone" />
 
     </FrameLayout>
 
@@ -27,6 +30,7 @@
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/foreground" />
 
 </LinearLayout>
