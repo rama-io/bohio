@@ -98,7 +98,6 @@
     <string name="radio_default">Default</string>
     <string name="radio_default_system">Default (System)</string>
     <string name="radio_font_custom">Custom font</string>
-    <string name="radio_language_english" translatable="false">English</string>
     <string name="radio_language_ca" translatable="false">Català</string>
     <string name="radio_language_de" translatable="false">Deutsch</string>
     <string name="radio_language_en" translatable="false">English</string>
