@@ -13,7 +13,6 @@
     <string name="btn_clear">Clear</string>
     <string name="btn_font_custom_pick">Choose Font file</string>
     <string name="btn_go_back">Go Back</string>
-    <string name="btn_join_discord">Join Discord</string>
     <string name="btn_reset">Reset</string>
     <string name="btn_save">Save</string>
     <string name="btn_theme_apply_custom">Apply Custom Theme</string>
@@ -100,16 +99,18 @@
     <string name="radio_default_system">Default (System)</string>
     <string name="radio_font_custom">Custom font</string>
     <string name="radio_language_english" translatable="false">English</string>
+    <string name="radio_language_ca" translatable="false">Català</string>
+    <string name="radio_language_de" translatable="false">Deutsch</string>
+    <string name="radio_language_en" translatable="false">English</string>
+    <string name="radio_language_es" translatable="false">Español</string>
     <string name="radio_language_fi" translatable="false">Suomi</string>
     <string name="radio_language_fil_rPH" translatable="false">Filipino</string>
-    <string name="radio_language_french" translatable="false">Français</string>
-    <string name="radio_language_german" translatable="false">Deutsch</string>
+    <string name="radio_language_fr" translatable="false">Français</string>
     <string name="radio_language_jp" translatable="false">日本語</string>
     <string name="radio_language_pt_rBR" translatable="false">Português (Brasil)</string>
     <string name="radio_language_system_default">System Default (fallback to English)</string>
-    <string name="radio_language_turkish" translatable="false">Türkçe</string>
+    <string name="radio_language_tr" translatable="false">Türkçe</string>
     <string name="radio_language_zh_rCN" translatable="false">简体中文</string>
-    <string name="radio_language_spanish" translatable="false">Español</string>
     <string name="radio_none">None</string>
     <string name="radio_theme_custom">Custom</string>
     <string name="radio_theme_mono_dark">Mono Dark</string>
