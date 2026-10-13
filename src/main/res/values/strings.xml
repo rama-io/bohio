@@ -80,12 +80,18 @@
     <string name="product_jersey_url" translatable="false">github.com/scfried/soft-type-jersey</string>
     <string name="product_mako" translatable="false">Mako</string>
     <string name="product_mako_url" translatable="false">github.com/rama-io/mako</string>
+    <string name="product_mako_zero" translatable="false">Mako Zero</string>
+    <string name="product_mako_zero_url" translatable="false">github.com/rama-io/mako_zero</string>
     <string name="product_melange_creator" translatable="false">Savq</string>
     <string name="product_melange_name" translatable="false">Mélange Dark</string>
     <string name="product_melange_url" translatable="false">github.com/savq/melange-nvim</string>
     <string name="product_okapi" translatable="false">Okapi</string>
     <string name="product_okapi_url" translatable="false">github.com/rama-io/okapi</string>
+    <string name="product_okapi_zero" translatable="false">Okapi Zero</string>
+    <string name="product_okapi_zero_url" translatable="false">github.com/rama-io/okapi_zero</string>
     <string name="product_rama" translatable="false">Rama</string>
+    <string name="product_suri_zero" translatable="false">Suri Zero</string>
+    <string name="product_suri_zero_url" translatable="false">github.com/rama-io/suri_zero</string>
     <string name="product_teyin" translatable="false">Teyin</string>
     <string name="product_teyin_url" translatable="false">github.com/rama-io/teyin</string>
     <string name="product_tokyo_creator" translatable="false">Enkia</string>
@@ -95,6 +101,8 @@
     <string name="product_tui_url" translatable="false">github.com/rama-io/tui</string>
     <string name="product_txori" translatable="false">Txori</string>
     <string name="product_txori_url" translatable="false">github.com/rama-io/txori</string>
+    <string name="product_txori_zero" translatable="false">Txori Zero</string>
+    <string name="product_txori_zero_url" translatable="false">github.com/rama-io/txori_zero</string>
     <string name="radio_default">Default</string>
     <string name="radio_default_system">Default (System)</string>
     <string name="radio_font_custom">Custom font</string>
@@ -105,6 +113,7 @@
     <string name="radio_language_fi" translatable="false">Suomi</string>
     <string name="radio_language_fil_rPH" translatable="false">Filipino</string>
     <string name="radio_language_fr" translatable="false">Français</string>
+    <string name="radio_language_gl" translatable="false">Galego</string>
     <string name="radio_language_jp" translatable="false">日本語</string>
     <string name="radio_language_pt_rBR" translatable="false">Português (Brasil)</string>
     <string name="radio_language_system_default">System Default (fallback to English)</string>
