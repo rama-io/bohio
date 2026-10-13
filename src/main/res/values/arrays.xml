@@ -25,6 +25,11 @@
     </string-array>
 
     <string-array name="catalogue_icon">
+        <item>@drawable/rama_mako_zero</item>
+        <item>@drawable/rama_txori_zero</item>
+        <item>@drawable/rama_okapi_zero</item>
+        <item>@drawable/rama_suri_zero</item>
+
         <item>@drawable/rama_mako</item>
         <item>@drawable/rama_txori</item>
         <item>@drawable/rama_tui</item>
@@ -34,6 +39,11 @@
     </string-array>
 
     <string-array name="catalogue_url">
+        <item>@string/product_mako_zero_url</item>
+        <item>@string/product_txori_zero_url</item>
+        <item>@string/product_okapi_zero_url</item>
+        <item>@string/product_suri_zero_url</item>
+
         <item>@string/product_mako_url</item>
         <item>@string/product_txori_url</item>
         <item>@string/product_tui_url</item>
